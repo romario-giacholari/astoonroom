@@ -30,5 +30,7 @@ Route::delete('/articles/{id}/delete', 'ArticlesController@destroy');
 Route::get('/articles/{id}/edit', 'ArticlesController@edit');
 Route::patch('/articles/{id}/update', 'ArticlesController@update');
 
+Route::post('/articles/{id}/photos/', 'PhotoController@store');
+
 
 });

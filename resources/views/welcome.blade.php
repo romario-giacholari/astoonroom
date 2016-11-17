@@ -81,7 +81,7 @@
             }
         </style>
     </head>
-    <body style = 'background-image:url("sc1.jpg");'>
+    <body style = 'background-color:#4D00B2'>
        
         <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:0.9'>
             <div class="content">
@@ -97,7 +97,7 @@
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
 
-         <a href="{{ url('/articles') }}"><button  class = 'btn btn-warning '> Browse</button></a> 
+         <a href="{{ url('/articles') }}">Browse</a> 
        
                     @endif
                 

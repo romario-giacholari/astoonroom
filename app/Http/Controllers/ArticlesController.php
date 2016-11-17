@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Article;
+use App\Photo;
 
 
 class ArticlesController extends Controller
@@ -43,9 +44,11 @@ class ArticlesController extends Controller
         $this->validate($request, [
         'title' => 'required|max:25',
         'location'=>'required|max:17',
-        'body' => 'required|max:555'
+        'body' => 'required|max:555',
+        'year' => 'required'
 
          ]);
+
         $user = Auth::user();
         $article = new Article;
         $article->user_id = $user->id;
@@ -70,6 +73,7 @@ class ArticlesController extends Controller
     public function show($id)
     {
         $articles = Article::findOrFail($id);
+        $image = Photo::find($articles->id);
         if(Auth::user())
         {
             if($articles->user_id != Auth::user()->id)
@@ -79,13 +83,20 @@ class ArticlesController extends Controller
             $articles->save();
             }  
         }
+
+        if(Auth::guest())
+        {
+            $articles->oldviews = $articles->views;
+            $articles->views += 1;
+            $articles->save();
+        }
         
         if(count($articles)<0)
         {
             return redirect('/articles');
         }
 
-        return view('articles.show', compact('articles'));
+        return view('articles.show', compact('articles','image'));
          
     }
 

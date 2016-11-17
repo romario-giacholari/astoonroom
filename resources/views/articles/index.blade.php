@@ -3,10 +3,10 @@
 @if(count($articles) >0)
 <div class = 'container'>
 <div class = 'row'>
-<div class = "col-md-13 col-md-offset-0" >
-<h1 style = 'color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'>All Posts</h1>
+<div class = "col-md-12 col-md-offset-0" >
 
-<div class="form-group">
+
+<!-- <div class="form-group">
 	  <form action = '/articles/search' method = 'GET'>
 	 	<input style = ' font-size:2em;font-family:Arial, Helvetica, sans-serif; ' class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'Search'  required>
 	 	
@@ -17,15 +17,16 @@
                 <option>created_at</option>
                 <option>gender</option>
                  <option>views</option>
-              </select> -->
+              </select> 
 	 </form>
 </div>
+-->
 <script>
 
  $(document).ready(function(){
             $('#search').click(function(){
 
-                $('#whole').css({ "opacity":"0.1"});
+                $('#whole').css({ "opacity":"0.5"});
 
             });
 
@@ -39,8 +40,8 @@
         </script>
 
 
-        <div class = 'container' id = 'whole'>
-        <div class ='row'>
+        <div   id = 'whole'>
+        <h1  style = 'height:5px;background-color:#00CCFF;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'></h1>
 @foreach($articles as $article)
 
 <a href = 'articles/{{$article->id}}' style = 
@@ -54,9 +55,9 @@
         @endif
 
 >
-<div class = "col-md-4	jumbotron col-md-offset-1" id ='Posts' style = "background-color:{{$article->color}};">
+<div class = "col-md-12	jumbotron col-md-offset-0" id ='Posts' style = "background-color:{{$article->color}};">
 
-		 <div class="form-group">
+		 <div class="col-md-3 col-md-offset-0 form-group">
 		 <span class = 'glyphicon glyphicon-home'></span>
 		  <div>Views: {{$article->views}}</div>
 		  <div>Year: {{$article->year}}</div>
@@ -72,14 +73,19 @@
 		    <div> {{$article->created_at->diffForHumans()}}</div>
 		  
 		     <label ><h2 style = 'font-family:Arial, Helvetica, sans-serif'>{{$article->title}}</h2></label>
-	
+		
+		 </div>
+	     <div class = "col-md-9 col-md-offset-0">
+		 @foreach($article->photo as $thumbnail)
+			<img src = '{{$thumbnail->path}}' height = "180px" width="180px">
+		 @endforeach
 		 </div>
 	</div>
 	</a>
 
 	@endforeach
 	</div>
-		</div>
+		
 </div>
 </div>
 </div>

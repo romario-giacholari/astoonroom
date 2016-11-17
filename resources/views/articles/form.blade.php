@@ -44,13 +44,13 @@
             <textarea maxlength=255" required class="form-control" id="body" name ='body' rows="5"></textarea>
             <small  class="form-text text-muted">Clear and thorough description of your room, availability etc.</small>
          </div>
-         
+
          <!--<div class="form-group">
           <label for="example-color-input" class="col-xs-2 col-form-label">Ad color</label>
             <input class="form-control" type="color" value="#D3D3D3" name = 'color' id="color">
             <small  class="form-text text-muted">Optional.</small>
          </div>
          -->
-         <button type="submit" class="btn btn-primary" style = 'margin-bottom:20px; width:100%'>{{$submitButton}}</button>
+         <button type="submit" class="btn btn-primary" style = 'margin-top:20px;margin-bottom:20px; width:100%'>{{$submitButton}}</button>
        
         </div>
