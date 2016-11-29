@@ -15,7 +15,7 @@
 </div>
 -->
      <div  id = 'whole'>
-     <h1 style = 'height:5px;background-color:#4AD452;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'></h1>
+     <h1 style = 'height:1px;background-color:#4AD452;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'></h1>
 @foreach($articles as $article)
 <a href = '{{$article->id}}' style = 
 
@@ -30,7 +30,7 @@
 
 >
 
-<div class = "col-md-12 col-md-offset-0 jumbotron" id ="Posts" style =' background-color:{{$article->color}}'>
+<div class = "col-md-12 col-md-offset-0 jumbotron" id ="Posts" style = 'height: 490px' >
 	
 		 <div class="col-md-3 col-md-offset-0 form-group">
 		 <span class = 'glyphicon glyphicon-home'></span>
@@ -52,7 +52,7 @@
 
 	     <div class = "col-md-9 col-md-offset-0">
 		 @foreach($article->photo as $thumbnail)
-			<img src = '{{$thumbnail->path}}' height = "180px" width="180px" >
+			<img src = '{{$thumbnail->path}}' height = "230px" width="230px" >
 		 @endforeach
 		 </div>
 </div>
@@ -69,7 +69,7 @@
 @else
 <div class = 'container'>
 	<div class = "col-md-12 col-md-offset-0" >
-	 <h1 style = 'height:5px;background-color:#E6001A;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'>
+	 <h1 style = 'height:1px;background-color:#E6001A;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'>
 	 <br />
 	<a id = 'nah' style = 'color:white;' href = '/articles'> <button class = 'btn btn-primary btn-lg'>Back</button></a>
 	 </h1>

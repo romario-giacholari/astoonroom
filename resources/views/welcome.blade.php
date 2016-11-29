@@ -81,7 +81,7 @@
             }
         </style>
     </head>
-    <body style = 'background-color:#4D00B2'>
+    <body style = 'background-image:url(aston.jpg)'>
        
         <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:0.9'>
             <div class="content">

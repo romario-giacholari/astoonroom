@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Article;
 use App\Photo;
+use \Cache;
 
 
 class ArticlesController extends Controller
@@ -17,8 +18,13 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('views', 'desc')->get();
+        $articles = Article::with('photo')->orderBy('views', 'desc')->get();
 
+        //$articles = Cache::remember('articles', 60, function()
+        //{
+        //    return Article::orderBy('views', 'desc')->get();
+        //});
+        
         return view ('articles.index', compact('articles'));
     }
 
@@ -61,7 +67,7 @@ class ArticlesController extends Controller
         $article->color = '#ffffff ';
         $article->save();
         \Session::flash('flash_message','Your ad has been created');
-        return back();
+        return redirect('articles/'.$article->id.'/edit');
     }
 
     /**
@@ -157,15 +163,15 @@ class ArticlesController extends Controller
              $search = $request->q;
              /*$by = $request ->sort;*/
             
-             $articles = Article::where("location", 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
+             $articles = Article::where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
 
            if(count($articles) == 0){
 
-              $articles = Article::where('title', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
+              $articles = Article::where('title', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
                   
                   if(count($articles) == 0){
 
-                $articles = Article::where('body', 'LIKE', "%$search%")->orderBy('created_at', 'desc')->get();
+                $articles = Article::where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
                   }
             }
         

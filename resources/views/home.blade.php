@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
 
-<div class = "col-md-6 col-md-offset-0 " >
+<div class = "col-md-12 col-md-offset-0 " >
     <h1  style ='font-family:Arial, Helvetica, sans-serif;'>My ads</h1>
 
     <table class="table table-inverse" >
@@ -42,23 +42,8 @@
     </table>
   </div>
 
- <div class="col-md-6 col-md-offset-0 ">
-@if(Session::has('flash_message'))
-<div  id='alert-msg' class = 'alert alert-success'>
-<h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
-<button id ='alert-msg-confirm' class ='btn btn-success'>Ok</button>
-</div>
+ 
 
-
-<script>
-$(document).ready(function(){
-  $('#alert-msg').fadeIn(2000);
-  $('#alert-msg-confirm').click(function(){
-     $('#alert-msg').slideToggle();
-  });
-});
-</script>
-@endif
 
   <form method = 'POST' action = 'article/store'>
   <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Property description.</h1>

@@ -7,35 +7,18 @@
     
 
 
-  <div class = "col-md-6 col-md-offset-0 ">
+  <div class = "col-md-12 col-md-offset-0 ">
          @foreach($articles->photo as $image)
            <img src = '{{$image->path}}'  height ="250px" width = "250px">
         @endforeach
 
   </div>
   
-@if(Auth::user())
-@if(Auth::user()->id == $articles->user_id)
-@if(count($articles->photo) < 4)
 
-  <div class = "col-md-6 col-md-offset-0 ">
-
-  <form class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
-
-  {{csrf_field()}}
-
-  </form>
-
-
-  </div>
-  @endif
-@endif
-@endif
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
   
     @if(Auth::user())
   @if(Auth::user()->id == $articles->user_id)
-  <div class = "col-md-6 col-md-offset-0" style = 
+  <div class = "col-md-12 col-md-offset-0" style = 
     @if($articles->color == '#000000')
 
 

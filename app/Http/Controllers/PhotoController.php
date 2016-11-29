@@ -46,6 +46,7 @@ class PhotoController extends Controller
         $thumbnail->path = '/article/photos/'.$name;
         $thumbnail->article_id = $article->id;
         $thumbnail->save();
+        return redirect('/articles');
       
     }
 

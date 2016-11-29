@@ -12,9 +12,10 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>{{ config('app.name', 'Laravel') }}</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
@@ -39,7 +40,7 @@
 
              $('#whole').hover(function(){
 
-                $('#whole').css({ "opacity":"1"});
+                $('body').css({ "opacity":"1"});
 
             });
 
@@ -54,7 +55,6 @@
     }
 
         #Posts:hover{
-        opacity:0.5;
         color:blue;
     }
 
@@ -66,20 +66,32 @@
     }
 
     #Posts{
-         height:250px;
+         height:450px;
          padding:20px;
          
          overflow:hidden;
-         border-style: ridge;
+        
          border-width: 1px;
          margin-top:20px;
+
     }
 
-    @media only screen and (max-width: 500px) {
-    #Posts {
-       height:445px;
+    @media screen and (max-width: 480px) {
+    #cover {
+        height:180px;
+    }
+    #Posts{
+        height:300px;
     }
 }
+
+
+  
+    #banner:hover{
+        opacity:0.4;
+    
+    }
+
 
     #nah:hover{
         text-decoration: none;
@@ -150,7 +162,7 @@
                         @endif
                         <li style = 'margin-top:8px'>
                        <form action = '/articles/search' method = 'GET'>
-                            <input  class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'Search by property location, e.g. James Watt' size="40" required>
+                            <input  class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'property location, e.g. James Watt' size="40" required>
                            
                         
                         <!-- <label for="Location">Sort by</label>

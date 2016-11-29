@@ -38,57 +38,55 @@
 
         });
         </script>
-
-
+@foreach($articles as $article)
+  @foreach($article->photo as $thumbnail)
+	@if(count($thumbnail)>0)
         <div   id = 'whole'>
-        <h1  style = 'height:5px;background-color:#00CCFF;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'></h1>
+        @else
+        <div id = 'whole' style = 'height:200px;'>
+        @endif
+        @endforeach	
+        @endforeach
+        <h1  style = 'height:1px;background-color:#00CCFF;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'></h1>
 @foreach($articles as $article)
 
-<a href = 'articles/{{$article->id}}' style = 
-@if($article->color == '#000000')
 
+<div class = "col-md-4 col-md-offset-0" id ='Posts' ">
 
-        'color:white';
-        @else
+	     
+			
+			@if(count($article->photo) > 0 )
+			<img id = 'cover' src = '{{$article->photo[0]->path}}' height = "280px" width="300px">
+			@else
+			<img id = 'cover' src = 'default.jpg	' height = "280px" width="300px">
+			@endif
+<a href = 'articles/{{$article->id}}'>
 
-        'color:black';
-        @endif
-
->
-<div class = "col-md-12	jumbotron col-md-offset-0" id ='Posts' style = "background-color:{{$article->color}};">
-
-		 <div class="col-md-3 col-md-offset-0 form-group">
-		 <span class = 'glyphicon glyphicon-home'></span>
-		  <div>Views: {{$article->views}}</div>
-		  <div>Year: {{$article->year}}</div>
-		  <div >Contact info: 
-		     @if($article->contact)
-		     Provided
-		     @else
-		     None given
-		     @endif
-		     </div>
-		     <div>Location: {{$article->location}}</div>
-		     <div>Gender: {{$article->gender}}</div>
-		    <div> {{$article->created_at->diffForHumans()}}</div>
+		  	<div id = 'banner' class = 'col-md-12 col-md-offset-0' style = 'margin-top:0px;background-color:#F0F5F5;max-width:300px ;min-width: 300px'>
+		    <h3 style = 'font-family:Arial, Helvetica, sans-serif'>{{$article->title}}</h3>
+		     <div>{{$article->location}}</div>
+		  	<span class="glyphicon glyphicon-eye-open"></span> {{$article->views}} 
+		  	<div>$400 pp</div>
+		  	 
+		  	  
 		  
-		     <label ><h2 style = 'font-family:Arial, Helvetica, sans-serif'>{{$article->title}}</h2></label>
+		   
+		</a>  
+		     
 		
 		 </div>
-	     <div class = "col-md-9 col-md-offset-0">
-		 @foreach($article->photo as $thumbnail)
-			<img src = '{{$thumbnail->path}}' height = "180px" width="180px">
-		 @endforeach
-		 </div>
 	</div>
-	</a>
-
+	
 	@endforeach
+
 	</div>
 		
 </div>
+
 </div>
+
 </div>
+
 @else
 <div class = 'container'>
 	<div class = "col-md-12 col-md-offset-0" >
