@@ -8,7 +8,7 @@ class Photo extends Model
 {
     
 
-
+	protected $fillable = ['path'];
 
     	public function article()
 	{

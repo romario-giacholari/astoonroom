@@ -20,7 +20,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color:white;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -81,7 +81,7 @@
             }
         </style>
     </head>
-    <body style = 'background-image:url(aston.jpg)'>
+    <body style = 'background-color:#F8F8F8;' >
        
         <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:0.9'>
             <div class="content">
@@ -107,5 +107,13 @@
             </div>
 
         </div>  
+        <div class="flex-center position-ref" style = 'color:black;padding:10px'>
+            <h1>Looking for a room or do you want to advertise your room?</h1>
+        </div>
+
+          <div class="flex-center position-ref" style = 'color:black;padding:10px'>
+          <img id = 'coverPhoto' src = 'room1.jpg'  width = '50%'>
+          <img id = 'coverPhoto' src = 'room2.jpg'  width = '50%'>
+        </div>
     </body>
 </html>

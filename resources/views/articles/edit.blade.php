@@ -38,7 +38,8 @@ $(document).ready(function(){
           </div>
            <div class="form-group">
             <label for="Location">Property location</label>
-            <select class="form-control" id="location" value = '{{$articles->location}}' name = 'location'>
+            <select class="form-control" id="location"  name = 'location'>
+                <option>{{$articles->location}}</option>
                 <option>Lakeside</option>
                 <option>William Murdoch</option>
                 <option>James Watt</option>
@@ -49,14 +50,16 @@ $(document).ready(function(){
           </div>
           <div class="form-group">
             <label for="Gender">Gender</label>
-            <select class="form-control" id="gender" value = '{{$articles->gender}}' name = 'gender'>
+            <select class="form-control" id="gender" name = 'gender'>
+                <option>{{$articles->gender}}</option>
                 <option>Male</option>
                 <option>Female</option>
               </select>
           </div>
             <div class="form-group">
             <label for="Year">Year of study</label>
-            <select class="form-control" id="year" value = '{{$articles->year}}' name = 'year'>
+            <select class="form-control" id="year" name = 'year'>
+                <option>{{$articles->year}}</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>

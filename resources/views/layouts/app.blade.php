@@ -61,32 +61,26 @@
     #AD{
          border-style: ridge;
          border-color: black;
-         border-width: 1px;
+         
       
     }
 
     #Posts{
-         height:450px;
-         padding:20px;
-         
+         padding:15px;
          overflow:hidden;
-        
-         border-width: 1px;
-         margin-top:20px;
+       
 
     }
 
     @media screen and (max-width: 480px) {
     #cover {
-        height:180px;
+        height:250px;
     }
     #Posts{
-        height:300px;
+        height:400px;
     }
 }
 
-
-  
     #banner:hover{
         opacity:0.4;
     
@@ -101,7 +95,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style = 'background-color: #f2f2f2'>
             <div class="container">
                 <div class="navbar-header">
 
@@ -181,6 +175,7 @@
         </nav>
 
         @yield('content')
+       
         
     </div>
 

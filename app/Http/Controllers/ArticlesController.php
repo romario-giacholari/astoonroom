@@ -24,7 +24,6 @@ class ArticlesController extends Controller
         //{
         //    return Article::orderBy('views', 'desc')->get();
         //});
-        
         return view ('articles.index', compact('articles'));
     }
 
@@ -163,17 +162,22 @@ class ArticlesController extends Controller
              $search = $request->q;
              /*$by = $request ->sort;*/
             
-             $articles = Article::where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
+             $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
 
            if(count($articles) == 0){
 
-              $articles = Article::where('title', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
+              $articles = Article::with('photo')->where('title', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
                   
                   if(count($articles) == 0){
 
-                $articles = Article::where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
-                  }
+                $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
+                  } 
+
+                  \Session::flash('flash_message','No results');
             }
+
+            
+
         
             return view('articles.search', compact('articles'));
         }

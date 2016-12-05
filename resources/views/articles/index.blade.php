@@ -52,7 +52,7 @@
 
 
 <div class = "col-md-4 col-md-offset-0" id ='Posts' ">
-
+<div class = 'row'>
 	     
 			
 			@if(count($article->photo) > 0 )
@@ -63,18 +63,20 @@
 <a href = 'articles/{{$article->id}}'>
 
 		  	<div id = 'banner' class = 'col-md-12 col-md-offset-0' style = 'margin-top:0px;background-color:#F0F5F5;max-width:300px ;min-width: 300px'>
+		  	<div class = 'row'>
 		    <h3 style = 'font-family:Arial, Helvetica, sans-serif'>{{$article->title}}</h3>
 		     <div>{{$article->location}}</div>
 		  	<span class="glyphicon glyphicon-eye-open"></span> {{$article->views}} 
 		  	<div>$400 pp</div>
 		  	 
 		  	  
-		  
-		   
+		  </div>
+		   </div>
 		</a>  
 		     
 		
-		 </div>
+		 
+	</div>
 	</div>
 	
 	@endforeach
