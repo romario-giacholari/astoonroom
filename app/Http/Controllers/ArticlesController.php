@@ -175,6 +175,7 @@ class ArticlesController extends Controller
                   } 
 
                   \Session::flash('flash_message','No results');
+                  return back();
             }
 
             

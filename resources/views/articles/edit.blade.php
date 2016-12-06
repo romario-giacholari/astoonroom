@@ -88,13 +88,14 @@ $(document).ready(function(){
   
 
   <div class = "col-md-6 col-md-offset-0 ">
+  <div class ='row'>
   @if(Auth::user())
 @if(Auth::user()->id == $articles->user_id)
 @if(count($articles->photo) < 4)
 
   <div class = "col-md-12 col-md-offset-0 ">
 
-  <form class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
+  <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
 
   {{csrf_field()}}
 
@@ -107,15 +108,23 @@ $(document).ready(function(){
 @endif
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
   <script>
+Dropzone.options.addPhotosForm = {
 
+  paramName: 'file',
+  maxFilesize: '3',
+  acceptedFiles: '.jpg,.jpeg,.png,.bmp'
+};
 
   </script>
          @foreach($articles->photo as $image)
+          
            <img src = '{{$image->path}}' style = 'padding:10px; margin-top:80px' height ="250px" width = "250px">
+
         @endforeach
 
   </div>
 
+</div>
 </div>
 </div>
 @endsection

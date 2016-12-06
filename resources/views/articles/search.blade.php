@@ -2,12 +2,24 @@
 
 @section('content')
 
-@if(count($articles) >0)
 
 <div class = 'container'>
 <h1 style = 'height:1px;background-color:#4AD452;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'></h1>
 <div class = 'row'>
 <div class = "col-md-10 col-md-offset-0" >
+
+ @if(Session::has('flash_message'))
+<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'padding: '>
+<h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('#alert-msg').fadeIn(2000);
+  });
+</script>
+@endif	
 <script>
 
  $(document).ready(function(){
@@ -68,13 +80,14 @@
 		    <label style = 'width:100%;font-family:Arial, Helvetica, sans-serif;'><h2>{{$article->title}}</h2></label>
 		 </div>
 	
-
+		@if(count($article->photo) > 0)
 	     <div class = "col-md-9 col-md-offset-0">
-		 <div class = 'row'>
-			<img src = '{{$article->photo[0]->path}}' height = "230px" width="230px" >
-			<img src = '{{$article->photo[1]->path}}' height = "230px" width="230px" >
-		</div>
+		 	<div class = 'row'>
+				<img src = '{{$article->photo[0]->path}}' height = "230px" width="230px" >
+				<img src = '{{$article->photo[1]->path}}' height = "230px" width="230px" >
+			</div>
 		 </div>
+		 @endif
 </div>
 
 </a>
@@ -86,18 +99,4 @@
 </div>
 </div>
 
-@else
- @if(Session::has('flash_message'))
-<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'padding: '>
-<h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
-</div>
-
-
-<script>
-$(document).ready(function(){
-  $('#alert-msg').fadeIn(2000);
-  });
-</script>
-@endif	
-@endif
 @endsection

@@ -36,6 +36,15 @@ class PhotoController extends Controller
      */
     public function store($id, Request $request)
     {
+
+        $this->validate($request, [
+
+            'file' => 'required|mimes:jpg,jpeg,png,bmp'
+
+            ]
+
+            );
+
         $article = Article::find($id);
 
         $file = $request->file('file');

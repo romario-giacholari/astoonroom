@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<body style = "background-image:url('sc1.jpg'); opacity:0.9">
+<body >
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

@@ -83,10 +83,10 @@
     </head>
     <body style = 'background-color:#F8F8F8;' >
        
-        <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:0.9'>
+        <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:1'>
             <div class="content">
                 <div class="title m-b-md">
-                    AstonRoom
+                    <h1 style ='font-family:Arial, Helvetica, sans-serif;'>AstonRoom</h1>
                 </div>
 
                 <div class="links">
@@ -108,7 +108,7 @@
 
         </div>  
         <div class="flex-center position-ref" style = 'color:black;padding:10px'>
-            <h1>Looking for a room or do you want to advertise your room?</h1>
+            <h1 >Looking for a room?</h1>
         </div>
 
           <div class="flex-center position-ref" style = 'color:black;padding:10px'>

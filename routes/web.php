@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 	
 Auth::routes();
-Route::get('/articles/search', 'ArticlesController@search');
-Route::get('/articles/{id}', 'ArticlesController@show');
-Route::get('/articles/', 'ArticlesController@index');	
+	
 
 
 
@@ -29,6 +27,9 @@ Route::post('/article/store', 'ArticlesController@store');
 Route::delete('/articles/{id}/delete', 'ArticlesController@destroy');
 Route::get('/articles/{id}/edit', 'ArticlesController@edit');
 Route::patch('/articles/{id}/update', 'ArticlesController@update');
+Route::get('/articles/search', 'ArticlesController@search');
+Route::get('/articles/{id}', 'ArticlesController@show');
+Route::get('/articles/', 'ArticlesController@index');
 
 Route::post('/articles/{id}/photos/', 'PhotoController@store');
 

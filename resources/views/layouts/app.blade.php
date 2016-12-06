@@ -9,7 +9,8 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        <link rel="icon" href="https://alphavulture.com/wp-content/uploads/2013/12/alpha.png" type="image/gif" sizes="16x16">
+        
     <title>{{ config('app.name', 'Laravel') }}</title>
  
 
@@ -53,6 +54,7 @@
 
         #Posts:hover{
         color:blue;
+        opacity:0.8;
     }
 
     #AD{
@@ -65,7 +67,7 @@
     #Posts{
          padding:15px;
          overflow:hidden;
-       
+         
 
     }
 
