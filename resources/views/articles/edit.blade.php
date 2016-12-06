@@ -106,6 +106,10 @@ $(document).ready(function(){
 @endif
 @endif
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
+  <script>
+
+
+  </script>
          @foreach($articles->photo as $image)
            <img src = '{{$image->path}}' style = 'padding:10px; margin-top:80px' height ="250px" width = "250px">
         @endforeach

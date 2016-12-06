@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
        <!-- Latest compiled and minified CSS -->
@@ -112,8 +112,8 @@
         </div>
 
           <div class="flex-center position-ref" style = 'color:black;padding:10px'>
-          <img id = 'coverPhoto' src = 'room1.jpg'  width = '50%'>
-          <img id = 'coverPhoto' src = 'room2.jpg'  width = '50%'>
+          <img id = 'coverPhoto' src = 'room1.jpg'  width = '50%' style = 'padding:5px'>
+          <img id = 'coverPhoto' src = 'room2.jpg'  width = '50%'  style = 'padding:5px'>
         </div>
     </body>
 </html>

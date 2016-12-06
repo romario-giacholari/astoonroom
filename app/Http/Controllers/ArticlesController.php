@@ -24,6 +24,7 @@ class ArticlesController extends Controller
         //{
         //    return Article::orderBy('views', 'desc')->get();
         //});
+        
         return view ('articles.index', compact('articles'));
     }
 
