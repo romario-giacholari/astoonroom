@@ -172,10 +172,15 @@ class ArticlesController extends Controller
                   if(count($articles) == 0){
 
                 $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
+                        
+                        if(count($articles) == 0){
+                            \Session::flash('flash_message','No results');
+                            return back();
+                        }
+                        
                   } 
 
-                  \Session::flash('flash_message','No results');
-                  return back();
+                  
             }
 
             

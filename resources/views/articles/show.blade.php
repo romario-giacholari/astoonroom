@@ -9,42 +9,24 @@
 
   <div class = "col-md-12 col-md-offset-0 ">
          @foreach($articles->photo as $image)
-           <img src = '{{$image->path}}'  height ="250px" width = "260px">
+           <img class = 'img-thumbnail ' src = '{{$image->path}}'>
         @endforeach
 
   </div>
   
 
   
-    @if(Auth::user())
-  @if(Auth::user()->id == $articles->user_id)
-  <div class = "col-md-12 col-md-offset-0" style = 
-    @if($articles->color == '#000000')
+  @if(Auth::user())
 
+    @if(Auth::user()->id == $articles->user_id)
+      
+      <div class = "col-md-12 col-md-offset-0">
 
-          'color:white; text-align:center'
-          @else
+    @else
 
-          'color:black;text-align:center'
-          @endif
-
-
-  >
-  @else
-
-  <div class = "col-md-12 col-md-offset-0" style = 
-    @if($articles->color == '#000000')
-
-
-          'color:white; text-align:center'
-          @else
-
-          'color:black;text-align:center'
-          @endif
-
-
-  >
-  @endif
+      <div class = "col-md-12 col-md-offset-0" >
+     
+    @endif
   @endif
 
       <div style = 'padding: 20px'>

@@ -101,6 +101,8 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $photo = Photo::find($id);
+        $photo->delete();
+        return back();
     }
 }

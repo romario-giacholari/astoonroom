@@ -71,14 +71,7 @@
 
     }
 
-    @media screen and (max-width: 480px) {
-    #cover {
-        height:250px;
-    }
-    #Posts{
-        height:400px;
-    }
-}
+   
 
     #banner:hover{
         opacity:0.4;

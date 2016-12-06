@@ -73,7 +73,7 @@ $(document).ready(function(){
 			@endif
 
 
-		  	<div id = 'banner' class = 'col-md-12 col-md-offset-0' style = 'margin-top:0px;background-color:#F0F5F5;max-width:300px ;min-width: 300px'>
+		  	<div id = 'banner' class = 'col-md-12 col-md-offset-0' style = 'margin-top:0px;background-color:#F0F5F5;max-width:300px ;min-width: 300px; padding:25px'>
 		  	<div class = 'row'>
 		    <h3 style = 'font-family:Arial, Helvetica, sans-serif'>{{$article->title}}</h3>
 		     <div>{{$article->location}}</div>

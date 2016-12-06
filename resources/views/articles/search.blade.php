@@ -83,8 +83,8 @@ $(document).ready(function(){
 		@if(count($article->photo) > 0)
 	     <div class = "col-md-9 col-md-offset-0">
 		 	<div class = 'row'>
-				<img src = '{{$article->photo[0]->path}}' height = "230px" width="230px" >
-				<img src = '{{$article->photo[1]->path}}' height = "230px" width="230px" >
+				<img class = 'img-thumbnail' src = '{{$article->photo[0]->path}}' height = "230px" width="230px" >
+				<img class = 'img-thumbnail'  src = '{{$article->photo[1]->path}}' height = "230px" width="230px" >
 			</div>
 		 </div>
 		 @endif

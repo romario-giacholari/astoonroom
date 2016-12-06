@@ -29,11 +29,7 @@
               </form>
          </td>
           <td style = 'height:100%;'>
-              <form action="articles/{{$article->id}}/delete" method="POST">
-                {{ csrf_field() }}
-                {{ method_field('DELETE') }}
-                <button class = 'btn btn-danger btn-sm pull-left '><span class = 'glyphicon glyphicon-trash'></span></button>
-              </form>
+                <button class = 'btn btn-danger btn-sm pull-left ' data-toggle="modal" data-target=".bd-example-modal-lg"><span class = 'glyphicon glyphicon-trash'></span></button>
          </td>
        </tr>
 
@@ -54,6 +50,20 @@
 
 </div>
 </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg ">
+    <div class="modal-content">
+      <form action="articles/{{$article->id}}/delete" method="POST">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                <button style = 'width:100%;height:100%' class = 'btn btn-danger btn-sm pull-left '>Delete</button>
+              
+      </form>
+    </div>
+  </div>
 </div>
 
 

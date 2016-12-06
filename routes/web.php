@@ -32,6 +32,6 @@ Route::get('/articles/{id}', 'ArticlesController@show');
 Route::get('/articles/', 'ArticlesController@index');
 
 Route::post('/articles/{id}/photos/', 'PhotoController@store');
-
+Route::delete('/photos/{id}', 'PhotoController@destroy');
 
 });

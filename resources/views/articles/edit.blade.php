@@ -19,7 +19,7 @@ $(document).ready(function(){
 @endif
 <div class = 'container'>
 <div class = "row"  >
-  <div class = "col-md-6 col-md-offset-0">
+  <div class = "col-md-5 col-md-offset-0">
 
     <form action="update" method="POST">
     <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Update your ad</h1>
@@ -87,9 +87,22 @@ $(document).ready(function(){
   </div>
   
 
-  <div class = "col-md-6 col-md-offset-0 ">
+  <div class = "col-md-5 col-md-offset-0 ">
   <div class ='row'>
-  @if(Auth::user())
+   @foreach($articles->photo as $image)
+           <div class = "col-md-6 col-md-offset-0 ">
+           <img class ='img-thumbnail' src = '{{$image->path}}' style = 'padding:10px; margin-top:40px' height ="250px" width = "250px">
+           @if(Auth::user())
+           <form action = '/photos/{{$image->id}}' method = 'POST'>
+             {{ method_field('DELETE') }}
+             {{csrf_field()}}
+           <button class = 'btn btn-primary' style = ''>delete</button>
+           </form>
+           @endif
+           </div>
+        @endforeach
+
+@if(Auth::user())
 @if(Auth::user()->id == $articles->user_id)
 @if(count($articles->photo) < 4)
 
@@ -109,19 +122,22 @@ $(document).ready(function(){
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
   <script>
 Dropzone.options.addPhotosForm = {
-
+  maxFiles:4,
+  init: function() {
+      this.on("maxfilesexceeded", function(file) {
+            this.removeAllFiles();
+            this.addFile(file);
+      });
+},
   paramName: 'file',
   maxFilesize: '3',
   acceptedFiles: '.jpg,.jpeg,.png,.bmp'
 };
 
+ 
+
   </script>
-         @foreach($articles->photo as $image)
-          
-           <img src = '{{$image->path}}' style = 'padding:10px; margin-top:80px' height ="250px" width = "250px">
-
-        @endforeach
-
+        
   </div>
 
 </div>
