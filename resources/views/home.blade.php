@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row">
-
+@if(count($articles) >0)
 <div class = "col-md-12 col-md-offset-0 " >
     <h1  style ='font-family:Arial, Helvetica, sans-serif;'>My ads</h1>
 
@@ -38,6 +38,19 @@
     </table>
   </div>
 
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg ">
+    <div class="modal-content">
+      <form action="articles/{{$article->id}}/delete" method="POST">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                <button style = 'width:100%;height:100%' class = 'btn btn-danger btn-sm pull-left '>Delete</button>
+              
+      </form>
+    </div>
+  </div>
+</div>
+@endif
  
 
 
@@ -53,18 +66,7 @@
 </div>
 
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg ">
-    <div class="modal-content">
-      <form action="articles/{{$article->id}}/delete" method="POST">
-                {{ csrf_field() }}
-                {{ method_field('DELETE') }}
-                <button style = 'width:100%;height:100%' class = 'btn btn-danger btn-sm pull-left '>Delete</button>
-              
-      </form>
-    </div>
-  </div>
-</div>
+
 
 
 @endsection

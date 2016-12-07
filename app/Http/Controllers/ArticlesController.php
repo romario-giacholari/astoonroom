@@ -18,13 +18,12 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::with('photo')->orderBy('views', 'desc')->get();
+        $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
 
         //$articles = Cache::remember('articles', 60, function()
         //{
         //    return Article::orderBy('views', 'desc')->get();
         //});
-        
         return view ('articles.index', compact('articles'));
     }
 
@@ -163,15 +162,15 @@ class ArticlesController extends Controller
              $search = $request->q;
              /*$by = $request ->sort;*/
             
-             $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
+             $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
 
            if(count($articles) == 0){
 
-              $articles = Article::with('photo')->where('title', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
+              $articles = Article::with('photo')->where('title', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
                   
                   if(count($articles) == 0){
 
-                $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->get();
+                $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
                         
                         if(count($articles) == 0){
                             \Session::flash('flash_message','No results');

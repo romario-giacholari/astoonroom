@@ -98,5 +98,5 @@ $(document).ready(function(){
 </div>
 </div>
 </div>
-
+<div class = 'text-center'>{{$articles->links()}}</div>
 @endsection

@@ -58,7 +58,24 @@ $(document).ready(function(){
         @endif
         @endforeach	
         @endforeach
-        <h1  style = 'height:1px;background-color:#00CCFF;color:black;font-size:3em; font-family:Arial, Helvetica, sans-serif;'></h1>
+        <div>
+        	<div class = "col-md-12 col-md-offset-0">
+				<div class = 'row'>
+					<div class = ' col-md-2 col-md-offset-0'>
+						<div class="form-group">
+				            
+					            <select class="form-control" id="location" name = 'location'>
+					                <option>Lakeside</option>
+					                <option>William Murdoch</option>
+					                <option>James Watt</option>
+					                <option>Harriet Martineau</option>
+					                 <option>Mary Sturge</option>
+					                 <option>Old fire station</option>
+					              </select>
+						</div>
+        		 </div>
+        	</div>
+        </div>
 @foreach($articles as $article)
 
 <a href = 'articles/{{$article->id}}'>
@@ -99,4 +116,7 @@ $(document).ready(function(){
 </div>
 
 </div>
+
+</div>
+<div class = 'text-center'>{{$articles->links()}}</div>
 @endsection

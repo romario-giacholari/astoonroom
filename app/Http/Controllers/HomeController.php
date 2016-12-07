@@ -33,6 +33,7 @@ class HomeController extends Controller
             $articles = Article::where('user_id',$id)->get();
             $count = $articles->count();
            /*$userArticle = $user->articles()->first();*/
-        return view('home', compact('articles', 'count'));
+          
+            return view('home', compact('articles', 'count'));
     }
 }
