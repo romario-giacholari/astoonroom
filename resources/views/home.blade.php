@@ -53,13 +53,24 @@
 @endif
  
 
-
+@if(count($articles)<3)
   <form method = 'POST' action = 'article/store'>
   <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Property description.</h1>
 
   @include ('articles.form', ['submitButton'=>'Post'])
         
    </form>
+@else
+@foreach($articles as $article)
+ @foreach($article->photo as $image)
+          <div class = "col-md-6 col-md-offset-0 ">
+           <img class ='img-thumbnail' src = '{{$image->path}}' style = 'padding:10px; margin-top:40px' height ="250px" width = "250px">
+           </div>
+    @endforeach
+  @endforeach
+
+
+@endif
 
 </div>
 </div>

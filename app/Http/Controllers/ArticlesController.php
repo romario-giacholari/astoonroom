@@ -63,7 +63,6 @@ class ArticlesController extends Controller
         $article->gender = $request->gender;
         $article->year = $request->year;
         $article->body = $request->body;
-        $article->color = '#ffffff ';
         $article->save();
         \Session::flash('flash_message','Your ad has been created');
         return redirect('articles/'.$article->id.'/edit');
@@ -83,7 +82,6 @@ class ArticlesController extends Controller
         {
             if($articles->user_id != Auth::user()->id)
             {
-            $articles->oldviews = $articles->views;
             $articles->views += 1;
             $articles->save();
             }  

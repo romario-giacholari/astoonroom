@@ -22,9 +22,7 @@ class CreateArticlesTable extends Migration
             $table->string('gender');
             $table->string('year');
             $table->integer('views')->default(0);
-            $table->integer('oldviews')->default(0);
             $table->string('body');
-            $table->string('color')->nullable()->default('grey');
             $table->timestamps();
         });
     }

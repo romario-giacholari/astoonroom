@@ -61,21 +61,33 @@ $(document).ready(function(){
         <div>
         	<div class = "col-md-12 col-md-offset-0">
 				<div class = 'row'>
-					<div class = ' col-md-2 col-md-offset-0'>
+					<div class = ' <col-md-12></col-md-12> col-md-offset-0'>
 						<div class="form-group">
-				            
-					            <select class="form-control" id="location" name = 'location'>
-					                <option>Lakeside</option>
-					                <option>William Murdoch</option>
-					                <option>James Watt</option>
-					                <option>Harriet Martineau</option>
-					                 <option>Mary Sturge</option>
-					                 <option>Old fire station</option>
-					              </select>
+						
+				           <form method = 'GET' action = 'articles/search'>
+								<label class="radio-inline">
+								<input type="radio" value = 'Lakeside' name="q">Lakeside
+								</label>
+								<label class="radio-inline">
+								<input type="radio" value = 'William Murdoch' name="q">William Murdoch
+								</label>
+								<label class="radio-inline">
+								<input type="radio" value = 'Harriet Martineau' name="q">Harriet Martineau
+								</label>
+								<label class="radio-inline">
+								<input type="radio" value = 'Mary Sturge' name="q">Mary Sturge
+								</label>
+								<label class="radio-inline">
+								<input type="radio" value = 'Old Fire Station' name="q">Old Fire Station
+								</label>
+
+								<button  class = 'btn btn-info'><span class="glyphicon glyphicon-search"></span></button>
+							</form>
 						</div>
         		 </div>
         	</div>
         </div>
+	
 @foreach($articles as $article)
 
 <a href = 'articles/{{$article->id}}'>

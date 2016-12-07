@@ -71,6 +71,12 @@
 
     }
 
+  
+
+    #pills{
+        margin-bottom:5px;
+    }
+
    
 
     #banner:hover{
