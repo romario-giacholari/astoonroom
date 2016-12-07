@@ -1,5 +1,5 @@
 <?php
-
+use App\Exception;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,4 +34,20 @@ Route::get('/articles/', 'ArticlesController@index');
 Route::post('/articles/{id}/photos/', 'PhotoController@store');
 Route::delete('/photos/{id}', 'PhotoController@destroy');
 
+
+
 });
+
+Route::any('/{catchall}/', function() {
+  return back();
+})->where('catchall', '.*');
+
+Route::any('/articles/{id}/{catchall}', function() {
+  return back();
+})->where('catchall', '.*');
+
+Route::any('/articles/{catchall}/', function() {
+  return back();
+})->where('catchall', '.*');
+
+

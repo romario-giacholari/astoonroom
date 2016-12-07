@@ -107,7 +107,6 @@ $(document).ready(function(){
 		    <h3 style = 'font-family:Arial, Helvetica, sans-serif'>{{$article->title}}</h3>
 		     <div>{{$article->location}}</div>
 		  	<span class="glyphicon glyphicon-eye-open"></span> {{$article->views}} 
-		  	<div>$400 pp</div>
 		  	 
 		  	  
 		  </div>

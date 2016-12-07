@@ -23,10 +23,9 @@
           <td>{{$article->title}}</td>
           <td>{{$article->views}}</td>
                <td style = 'height:100%;'>
-              <form action="articles/{{$article->id}}/edit" method="GET" >
-
+              <a href="articles/{{$article->id}}/edit">
                 <button class = 'btn btn-success btn-sm pull-left'>edit</button>
-              </form>
+              </a>
          </td>
           <td style = 'height:100%;'>
                 <button class = 'btn btn-danger btn-sm pull-left ' data-toggle="modal" data-target=".bd-example-modal-lg"><span class = 'glyphicon glyphicon-trash'></span></button>
@@ -44,9 +43,11 @@
       <form action="articles/{{$article->id}}/delete" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('DELETE') }}
-                <button style = 'width:100%;height:100%' class = 'btn btn-danger btn-sm pull-left '>Delete</button>
+                <button style = 'width:100%;height:100%' class = 'btn btn-danger btn-lg pull-left '>Delete</button>
               
       </form>
+      <button style = 'margin-top:10px;width:100%;height:100%' class = 'btn btn-default btn-lg pull-left ' data-dismiss="modal">Cancel</button>
+              
     </div>
   </div>
 </div>

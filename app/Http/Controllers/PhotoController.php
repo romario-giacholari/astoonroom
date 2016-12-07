@@ -46,7 +46,6 @@ class PhotoController extends Controller
             );
 
         $article = Article::find($id);
-
         $file = $request->file('file');
         $name = time() . $file->getClientOriginalName();
         $file->move('article/photos', $name);

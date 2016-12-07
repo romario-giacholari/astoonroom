@@ -45,7 +45,6 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
         'title' => 'required|max:25',
         'location'=>'required|max:17',
@@ -76,7 +75,12 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        $articles = Article::findOrFail($id);
+        $articles = Article::find($id);
+         if($articles == null)
+        {
+            return back();
+        }
+
         $image = Photo::find($articles->id);
         if(Auth::user())
         {
@@ -94,10 +98,7 @@ class ArticlesController extends Controller
             $articles->save();
         }
         
-        if(count($articles)<0)
-        {
-            return redirect('/articles');
-        }
+       
 
         return view('articles.show', compact('articles','image'));
          
@@ -158,6 +159,9 @@ class ArticlesController extends Controller
         public function search(Request $request)
         {
              $search = $request->q;
+             if($search == null){
+                 return back();
+             }
              /*$by = $request ->sort;*/
             
              $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);

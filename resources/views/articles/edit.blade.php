@@ -105,9 +105,9 @@ $(document).ready(function(){
 
 @if(Auth::user())
 @if(Auth::user()->id == $articles->user_id)
-@if(count($articles->photo) < 4)
+@if(count($articles->photo) == 0)
 
-  <div class = "col-md-12 col-md-offset-0 ">
+  <div class = "col-md-6 col-md-offset-0 ">
 
   <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
 
@@ -130,6 +130,7 @@ Dropzone.options.addPhotosForm = {
             this.addFile(file);
       });
 },
+  maxFiles: 4,
   paramName: 'file',
   maxFilesize: '3',
   acceptedFiles: '.jpg,.jpeg,.png,.bmp'
