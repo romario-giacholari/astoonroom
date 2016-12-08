@@ -112,8 +112,8 @@
         </div>
 
           <div class="flex-center position-ref" style = 'color:black;padding:10px'>
-          <img id = 'coverPhoto' src = 'room1.jpg'  width = '50%' style = 'padding:5px'>
-          <img id = 'coverPhoto' src = 'room2.jpg'  width = '50%'  style = 'padding:5px'>
+          <img id = 'coverPhoto' src = 'room1.jpg'  width = '50%' style = 'padding:15px'>
+          <img id = 'coverPhoto' src = 'room2.jpg'  width = '50%'  style = 'padding:15px'>
         </div>
     </body>
 </html>

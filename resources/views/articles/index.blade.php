@@ -61,7 +61,6 @@ $(document).ready(function(){
         <div>
         	<div class = "col-md-12 col-md-offset-0">
 				<div class = 'row'>
-					<div class = ' <col-md-12></col-md-12> col-md-offset-0'>
 						<div class="form-group">
 						
 				           <form method = 'GET' action = 'articles/search'>
@@ -85,7 +84,6 @@ $(document).ready(function(){
 							</form>
 						</div>
         		 </div>
-        	</div>
         </div>
 	
 @foreach($articles as $article)

@@ -24,12 +24,16 @@
     @endif
   @endif
 
-      <div style = 'padding: 20px'>
-
+      <div style = 'padding:40px'>
+          @if(Auth::check())
           <a href = '/articles/{{$articles->id}}/edit'>
+         
           <h1 class = 'cobotron'> {{$articles->title}}  </h1>
           </a>
-          <div style = 'font-size:1em; font-family: Arial; padding:  '>{{$articles->body}}</div>
+          @else
+          <h1 class = 'cobotron'> {{$articles->title}}  </h1>
+          @endif
+          <div style = 'font-size:1em; font-family: Arial; '>{{$articles->body}}</div>
           <hr>
            <div style = 'font-size:1em; font-family: Arial; '>Year: {{$articles->year}}</div>
           <div style = 'font-size:1em; font-family: Arial; '>Location: {{$articles->location}}</div>
