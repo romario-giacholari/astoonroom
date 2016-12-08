@@ -9,7 +9,7 @@
           </div>
           <div class="form-group">
             <label for="Title">Contact info</label>
-            <input type="text" class="form-control" id="contact" name = 'contact'  placeholder="Optional">
+            <input required type="text" class="form-control" id="contact" name = 'contact'  placeholder="contact info">
             <small  class="form-text text-muted">If you want to make it easier for others to reach you, provide your contact info. Notice that the contact info will be public to all members!</small>
           </div>
            <div class="form-group">
@@ -20,7 +20,6 @@
                 <option>James Watt</option>
                 <option>Harriet Martineau</option>
                  <option>Mary Sturge</option>
-                 <option>Old Fire Station</option>
               </select>
             <small  class="form-text text-muted">Provide the location of the accommodation</small>
           </div>

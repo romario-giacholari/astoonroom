@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="col-md-12 col-md-offset-0 ">
+<div class="col-md-10 col-md-offset-1 ">
 @if(Session::has('flash_message'))
 <div  id='alert-msg' class = 'alert alert-success'>
 <h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
@@ -45,7 +45,6 @@ $(document).ready(function(){
                 <option>James Watt</option>
                 <option>Harriet Martineau</option>
                  <option>Mary Sturge</option>
-                 <option>Old Fire Station</option>
               </select>
             <small  class="form-text text-muted">Provide the location of the accommodation</small>
           </div>
@@ -73,17 +72,9 @@ $(document).ready(function(){
             <small  class="form-text text-muted">Clear and thorough description of your room, availability etc.</small>
          </div>
 
-         <!--<div class="form-group">
-          <label for="example-color-input" class="col-xs-2 col-form-label">Ad color</label>
-            <input class="form-control" type="color" value="#D3D3D3" name = 'color' id="color">
-            <small  class="form-text text-muted">Optional.</small>
-         </div>
-         -->
+         
          <button type="submit" class="btn btn-primary" style = 'margin-top:20px;margin-bottom:20px; width:100%'>update</button>
        
-        
-
-
     </form>
   </div>
   
@@ -107,8 +98,8 @@ $(document).ready(function(){
 @if(Auth::user()->id == $articles->user_id)
 @if(count($articles->photo) == 0)
 
-  <div class = "col-md-6 col-md-offset-0 ">
-
+  <div class = "col-md-12 col-md-offset-0  jumbotron" style = 'margin-top:80px'>
+    <h2 style ='font-family:Arial, Helvetica, sans-serif;'>Upload up to 4 images and hit update</h2>
   <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
 
   {{csrf_field()}}

@@ -78,7 +78,7 @@ $(document).ready(function(){
 								<input type="radio" value = 'Mary Sturge' name="q">Mary Sturge
 								</label>
 								<label class="radio-inline">
-								<input type="radio" value = 'Old Fire Station' name="q">Old Fire Station
+								<input type="radio" value = 'James Watt' name="q">James Watt
 								</label>
 
 								<button  class = 'btn btn-info'><span class="glyphicon glyphicon-search"></span></button>

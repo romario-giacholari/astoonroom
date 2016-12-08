@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('title');
-            $table->string('contact')->nullable();
+            $table->string('contact');
             $table->string('location');
             $table->string('gender');
             $table->string('year');

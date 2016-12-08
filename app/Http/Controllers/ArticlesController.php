@@ -47,7 +47,7 @@ class ArticlesController extends Controller
     {
         $this->validate($request, [
         'title' => 'required|max:25',
-        'location'=>'required|max:17',
+        'location'=>'required|in:Lakeside,William Murdoch,James Watt,Harriet Martineau,Mary Sturge',
         'body' => 'required|max:555',
         'year' => 'required'
 
@@ -93,7 +93,7 @@ class ArticlesController extends Controller
 
         if(Auth::guest())
         {
-            $articles->oldviews = $articles->views;
+           
             $articles->views += 1;
             $articles->save();
         }
