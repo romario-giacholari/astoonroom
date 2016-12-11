@@ -138,7 +138,7 @@ class ArticlesController extends Controller
             $article = Article::find($id);
             $article->update($request->all());
             $article->save();
-            return redirect('/articles');
+            return back();
     }
 
     /**
