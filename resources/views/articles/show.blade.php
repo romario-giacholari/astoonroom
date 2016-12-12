@@ -11,28 +11,13 @@
   
 
   
-  @if(Auth::user())
-
-    @if(Auth::user()->id == $articles->user_id)
-      
-      <div class = "col-md-12 col-md-offset-0">
-
-    @else
+ 
 
       <div class = "col-md-12 col-md-offset-0" >
      
-    @endif
-  @endif
 
-      <div style = 'padding:40px'>
-          @if(Auth::check())
-          <a href = '/articles/{{$articles->id}}/edit'>
-         
+      <div class = 'jumbotron' style = 'padding:40px'>
           <h1 class = 'cobotron'> {{$articles->title}}  </h1>
-          </a>
-          @else
-          <h1 class = 'cobotron'> {{$articles->title}}  </h1>
-          @endif
           <div style = 'font-size:1em; font-family: Arial; '>{{$articles->body}}</div>
           <hr>
            <div style = 'font-size:1em; font-family: Arial; '>Year: {{$articles->year}}</div>
