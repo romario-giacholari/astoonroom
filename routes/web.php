@@ -13,6 +13,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/articles/', 'ArticlesController@index');
+Route::get('/articles/{id}', 'ArticlesController@show');
+Route::get('/articles/search', 'ArticlesController@search');
 	
 Auth::routes();
 

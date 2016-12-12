@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+@if(count($articles) > 0)
 <div class = 'container'>
 <div class = 'row'>
 <div class = "col-md-12 col-md-offset-0" >
@@ -137,4 +137,13 @@ $(document).ready(function(){
 
 </div>
 <div class = 'text-center'>{{$articles->links()}}</div>
+@else
+<div class = 'container'>
+	<div class = 'row'>
+		<div class = "col-md-12 col-md-offset-0" >
+			<div class = 'jumbotron'><h1>No ads have been placed yet :/</h1> </div>
+		</div>
+	</div>
+</div>		
+@endif
 @endsection
