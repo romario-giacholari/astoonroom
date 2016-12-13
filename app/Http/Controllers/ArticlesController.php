@@ -159,9 +159,7 @@ class ArticlesController extends Controller
         public function search(Request $request)
         {
              $search = $request->q;
-             if($search == null){
-                 return back();
-             }
+            
              /*$by = $request ->sort;*/
             
              $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);

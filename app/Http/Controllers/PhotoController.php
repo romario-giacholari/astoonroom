@@ -47,14 +47,13 @@ class PhotoController extends Controller
 
         $article = Article::find($id);
         $file = $request->file('file');
-        $name = time() . $file->getClientOriginalName();
+        $name = time().$file->getClientOriginalName();
         $file->move('article/photos', $name);
         $path = $request->file->path();
-         $thumbnail = new Photo;
+        $thumbnail = new Photo;
         $thumbnail->path = '/article/photos/'.$name;
         $thumbnail->article_id = $article->id;
         $thumbnail->save();
-        return redirect('/articles');
       
     }
 
