@@ -50,7 +50,7 @@ class PhotoController extends Controller
         $name = time() . $file->getClientOriginalName();
         $file->move('article/photos', $name);
         $path = $request->file->path();
-        $thumbnail = new Photo;
+         $thumbnail = new Photo;
         $thumbnail->path = '/article/photos/'.$name;
         $thumbnail->article_id = $article->id;
         $thumbnail->save();
