@@ -18,13 +18,13 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
+       // $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
 
         //$articles = Cache::remember('articles', 60, function()
         //{
         //    return Article::orderBy('views', 'desc')->get();
         //});
-        return view ('articles.index', compact('articles'));
+        return view ('articles.index');
     }
 
     /**
