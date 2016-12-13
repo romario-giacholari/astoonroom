@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-@if(count($articles))
+@if(count($articles)>0)
 <div class = 'container'>
 <div class = 'row'>
 <div class = "col-md-12 col-md-offset-0" >
