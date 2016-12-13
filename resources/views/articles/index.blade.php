@@ -107,7 +107,7 @@ $(document).ready(function(){
 			@if(count($article->photo) > 0 )
 			<img class = 'img-thumbnail' src = '{{$article->photo[0]->path}}' >
 			@else
-			<img class = 'img-thumbnail' style = 'width:100%' src = 'default.jpg' >
+			<img class = 'img-thumbnail' style = 'width:100%' src = 'default.png' >
 			@endif
 
 

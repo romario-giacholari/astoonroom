@@ -1,11 +1,12 @@
 @extends('layouts.app')
 @section('content')
-<div class="col-md-10 col-md-offset-1 ">
+<div class="col-md-12 col-md-offset-0 ">
 @if(Session::has('flash_message'))
 <div  id='alert-msg' class = 'alert alert-success'>
 <h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
 <button id ='alert-msg-confirm' class ='btn btn-success'>Ok</button>
 </div>
+
 
 
 <script>
@@ -19,7 +20,7 @@ $(document).ready(function(){
 @endif
 <div class = 'container'>
 <div class = "row"  >
-  <div class = "col-md-5 col-md-offset-0">
+  <div class = "col-md-12 col-md-offset-0">
 
     <form action="update" method="POST">
     <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Update your ad</h1>
@@ -78,7 +79,7 @@ $(document).ready(function(){
     </form>
   </div>
   
-
+<!--
   <div class = "col-md-5 col-md-offset-0 ">
   <div class ='row'>
    @foreach($articles->photo as $image)
@@ -99,7 +100,7 @@ $(document).ready(function(){
 @if(count($articles->photo) == 0)
 
   <div class = "col-md-12 col-md-offset-0  jumbotron" style = 'margin-top:80px'>
-    <h2 style ='font-family:Arial, Helvetica, sans-serif;'>Upload up to 4 images and hit update</h2>
+    <h2 style ='font-family:Arial, Helvetica, sans-serif;'>Upload image and hit update</h2>
   <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
 
   {{csrf_field()}}
@@ -114,14 +115,14 @@ $(document).ready(function(){
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
   <script>
 Dropzone.options.addPhotosForm = {
-  maxFiles:4,
+  maxFiles:1,
   init: function() {
       this.on("maxfilesexceeded", function(file) {
             this.removeAllFiles();
             this.addFile(file);
       });
 },
-  maxFiles: 4,
+  maxFiles: 1,
   paramName: 'file',
   maxFilesize: '3',
   acceptedFiles: '.jpg,.jpeg,.png,.bmp'
@@ -132,6 +133,10 @@ Dropzone.options.addPhotosForm = {
   </script>
         
   </div>
+
+</div>
+
+-->
 
 </div>
 </div>
