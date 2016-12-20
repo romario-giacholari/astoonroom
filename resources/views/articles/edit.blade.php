@@ -79,7 +79,7 @@ $(document).ready(function(){
     </form>
   </div>
   
-<!--
+
   <div class = "col-md-5 col-md-offset-0 ">
   <div class ='row'>
    @foreach($articles->photo as $image)
@@ -136,7 +136,7 @@ Dropzone.options.addPhotosForm = {
 
 </div>
 
--->
+
 
 </div>
 </div>
