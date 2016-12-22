@@ -17,7 +17,9 @@ class ArticlesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
+
         $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
 
         //$articles = Cache::remember('articles', 60, function()

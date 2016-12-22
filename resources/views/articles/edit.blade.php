@@ -1,10 +1,15 @@
 @extends('layouts.app')
 @section('content')
+<div class = 'container'>
+<div class = 'row'>
 <div class="col-md-12 col-md-offset-0 ">
 @if(Session::has('flash_message'))
 <div  id='alert-msg' class = 'alert alert-success'>
-<h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
-<button id ='alert-msg-confirm' class ='btn btn-success'>Ok</button>
+<p style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}
+
+<button id ='alert-msg-confirm' class ='btn btn-success btn-sm pull-right'>Ok</button>
+</p>
+
 </div>
 
 
@@ -18,9 +23,14 @@ $(document).ready(function(){
 });
 </script>
 @endif
+</div>
+</div>
+</div>
+
+
 <div class = 'container'>
 <div class = "row"  >
-  <div class = "col-md-12 col-md-offset-0">
+  <div class = "col-md-7 col-md-offset-0">
 
     <form action="update" method="POST">
     <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Update your ad</h1>
@@ -83,13 +93,13 @@ $(document).ready(function(){
   <div class = "col-md-5 col-md-offset-0 ">
   <div class ='row'>
    @foreach($articles->photo as $image)
-           <div class = "col-md-6 col-md-offset-0 ">
-           <img class ='img-thumbnail' src = '{{$image->path}}' style = 'padding:10px; margin-top:40px' height ="250px" width = "250px">
+           <div class = "col-md-12 col-md-offset-0 ">
+           <img class ='img-thumbnail' src = '{{$image->path}}' style = 'margin-top:80px'>
            @if(Auth::user())
            <form action = '/photos/{{$image->id}}' method = 'POST'>
              {{ method_field('DELETE') }}
              {{csrf_field()}}
-           <button class = 'btn btn-primary' style = ''>delete</button>
+           <button class = 'btn btn-primary' style = 'margin-top:20px;margin-bottom:20px; width:100%'>delete</button>
            </form>
            @endif
            </div>
@@ -107,7 +117,7 @@ $(document).ready(function(){
 
   </form>
 
-
+  <a href = '/articles'><button class = 'btn btn-primary' style = 'margin-top:20px;margin-bottom:20px; width:100%'>Ok</button></a>
   </div>
   @endif
 @endif
@@ -140,5 +150,6 @@ Dropzone.options.addPhotosForm = {
 
 </div>
 </div>
-</div>
+
+
 @endsection

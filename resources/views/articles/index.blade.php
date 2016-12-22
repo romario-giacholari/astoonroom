@@ -59,9 +59,9 @@ $(document).ready(function(){
         @endforeach	
         @endforeach
         <div>
-        	<div class = "col-md-12 col-md-offset-0">
+        	<div class = "col-md-12 col-md-offset-0 ">
 				<div class = 'row'>
-						<div class="form-group">
+						<div class="form-group ">
 						
 				           <form method = 'GET' action = 'articles/search'>
 						   <div class = "col-md-2 col-md-offset-0">
@@ -105,7 +105,7 @@ $(document).ready(function(){
 	     
 			
 			@if(count($article->photo) > 0 )
-			<img class = 'img-thumbnail' src = '{{$article->photo[0]->path}}' >
+			<img class ='img-responsive' src = '{{$article->photo[0]->path}}'>
 			@else
 			<img class = 'img-thumbnail' style = 'width:100%' src = 'default.png' >
 			@endif

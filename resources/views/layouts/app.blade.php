@@ -93,7 +93,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top" style = 'background-color: #f2f2f2'>
+        <nav class="navbar navbar-default navbar-static-top" >
             <div class="container">
                 <div class="navbar-header">
 

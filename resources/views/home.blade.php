@@ -64,9 +64,13 @@
 @else
 @foreach($articles as $article)
  @foreach($article->photo as $image)
-          <div class = "col-md-12 col-md-offset-0 ">
-           <img class ='img-thumbnail' src = '{{$image->path}}' style = 'padding:10px; margin-top:40px' height ="350px" width = "350px">
+
+          <div class = "col-md-4 col-md-offset-0 ">
+            <a href = 'articles/{{$article->id}}'>
+           <img class ='img-responsive' src = '{{$image->path}}' style = ' margin-top:40px' >
+           </a>
            </div>
+  
     @endforeach
   @endforeach
 
