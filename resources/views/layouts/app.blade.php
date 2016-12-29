@@ -77,23 +77,20 @@
         margin-bottom:5px;
     }
 
-   
-
-    #banner:hover{
-        opacity:0.4;
-    
-    }
-
 
     #nah:hover{
         text-decoration: none;
+    }
+
+    #imageHome:hover{
+        opacity:0.6;
     }
 
     </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top" >
+        <nav class="navbar navbar-inverse navbar-static-top" >
             <div class="container">
                 <div class="navbar-header">
 
@@ -152,9 +149,9 @@
                                 </ul>
                             </li>
                         @endif
-                        <li style = 'margin-top:8px'>
+                        <li style = 'padding:10px'>
                        <form action = '/articles/search' method = 'GET'>
-                            <input  class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'property location, e.g. James Watt' size="40" required>
+                            <input  class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
                            
                         
                         <!-- <label for="Location">Sort by</label>

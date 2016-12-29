@@ -99,7 +99,7 @@ $(document).ready(function(){
            <form action = '/photos/{{$image->id}}' method = 'POST'>
              {{ method_field('DELETE') }}
              {{csrf_field()}}
-           <button class = 'btn btn-primary' style = 'margin-top:20px;margin-bottom:20px; width:100%'>delete</button>
+           <button class = 'btn btn-danger' style = 'margin-top:20px;margin-bottom:20px; width:100%'>delete</button>
            </form>
            @endif
            </div>
@@ -110,7 +110,7 @@ $(document).ready(function(){
 @if(count($articles->photo) == 0)
 
   <div class = "col-md-12 col-md-offset-0  jumbotron" style = 'margin-top:80px'>
-    <h2 style ='font-family:Arial, Helvetica, sans-serif;'>Upload image and hit update</h2>
+    <h2 style ='font-family:Arial, Helvetica, sans-serif;'>Upload image and click ok</h2>
   <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
 
   {{csrf_field()}}

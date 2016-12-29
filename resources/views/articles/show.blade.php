@@ -23,18 +23,16 @@
            <div style = 'font-size:1em; font-family: Arial; '>Year: {{$articles->year}}</div>
           <div style = 'font-size:1em; font-family: Arial; '>Location: {{$articles->location}}</div>
            <div style = 'font-size:1em; font-family: Arial; '>Gender: {{$articles->gender}}</div>
-           @if($articles->contact)
+           @if(Auth::check())
            <div style = 'font-size:1em; font-family: Arial; '>Contact info:{{$articles->contact}}</div>
-           @else
-           <div style = 'font-size:1em; font-family: Arial; '>Contact info: Non given</div>
            @endif
            <div style = 'font-size:1em; font-family: Arial; '>Created: {{$articles->created_at->diffForHumans()}}</div>
    </div>
 </div>
 
-<div class = "col-md-12 col-md-offset-0 ">
+<div class="col-xs-12 col-md-12">
          @foreach($articles->photo as $image)
-           <img class = 'img-thumbnail ' src = '{{$image->path}}'>
+           <img class = 'img-responsive ' src = '{{$image->path}}'>
         @endforeach
 
   </div>

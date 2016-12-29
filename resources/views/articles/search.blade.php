@@ -48,7 +48,7 @@ $(document).ready(function(){
      
 
 @foreach($articles as $article)
-<a href = '{{$article->id}}'>
+<a href = '{{$article->title}}'>
 <div class = "col-md-12 col-md-offset-0 jumbotron" id ="Posts"  >
 	
 		 <div class="col-md-3 col-md-offset-0 form-group">
@@ -70,7 +70,7 @@ $(document).ready(function(){
 		@if(count($article->photo) > 0)
 	     <div class = "col-md-9 col-md-offset-0">
 		 	<div class = 'row'>
-				<img class = 'img-thumbnail' src = '{{$article->photo[0]->path}}' height = "250px" width="230px" >
+				<img class = 'img-responsive' src = '{{$article->photo[0]->path}}' height = "250px" width="230px" >
 			</div>
 		 </div>
 		 @endif

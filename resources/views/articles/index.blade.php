@@ -99,8 +99,8 @@ $(document).ready(function(){
 	
 @foreach($articles as $article)
 
-<a href = 'articles/{{$article->id}}'>
-<div class = "col-md-4 col-md-offset-0" id ='Posts' >
+<a href = 'articles/{{$article->title}}'>
+<div class="col-xs-6 col-md-4" id ='Posts' >
 <div class = 'row'>
 	     
 			
@@ -141,7 +141,7 @@ $(document).ready(function(){
 <div class = 'container'>
 	<div class = 'row'>
 		<div class = "col-md-12 col-md-offset-0" >
-			<div class = 'jumbotron'><h1>No ads have been placed yet :/</h1> </div>
+			<div class = 'jumbotron'><h1 style = 'font-family:Lato'>No ads have been placed yet</h1> </div>
 		</div>
 	</div>
 </div>		

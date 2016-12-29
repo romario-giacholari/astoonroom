@@ -66,7 +66,7 @@ class ArticlesController extends Controller
         $article->body = $request->body;
         $article->save();
         \Session::flash('flash_message','Your ad has been created');
-        return redirect('articles/'.$article->id.'/edit');
+        return redirect('articles/'.$article->title.'/edit');
     }
 
     /**
@@ -75,9 +75,9 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($title)
     {
-        $articles = Article::find($id);
+        $articles = Article::where('title', $title)->first();
          if($articles == null)
         {
             return back();
@@ -112,9 +112,9 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($title)
     {
-        $articles = Article::findOrFail($id);
+        $articles = Article::where('title',$title)->first();
 
         if($articles->user_id == Auth::user()->id)
         {
@@ -137,6 +137,14 @@ class ArticlesController extends Controller
     public function update(Request $request, $id)
     {   
     
+        $this->validate($request, [
+        'title' => 'required|max:25',
+        'location'=>'required|in:Lakeside,William Murdoch,James Watt,Harriet Martineau,Mary Sturge',
+        'body' => 'required|max:555',
+        'year' => 'required'
+
+         ]);
+
             $article = Article::find($id);
             $article->update($request->all());
             $article->save();
@@ -162,9 +170,9 @@ class ArticlesController extends Controller
         {
              $search = $request->q;
             
-             /*$by = $request ->sort;*/
             
-             $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
+            
+         $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
 
            if(count($articles) == 0){
 
@@ -184,9 +192,6 @@ class ArticlesController extends Controller
                   
             }
 
-            
-
-        
-            return view('articles.search', compact('articles'));
+          return view('articles.search', compact('articles'));
         }
 }

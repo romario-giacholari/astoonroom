@@ -23,7 +23,7 @@
           <td>{{$article->title}}</td>
           <td>{{$article->views}}</td>
                <td style = 'height:100%;'>
-              <a href="articles/{{$article->id}}/edit">
+              <a href="articles/{{$article->title}}/edit">
                 <button class = 'btn btn-success btn-sm pull-left'>edit</button>
               </a>
          </td>
@@ -66,8 +66,8 @@
  @foreach($article->photo as $image)
 
           <div class = "col-md-4 col-md-offset-0 ">
-            <a href = 'articles/{{$article->id}}'>
-           <img class ='img-responsive' src = '{{$image->path}}' style = ' margin-top:40px' >
+            <a href = 'articles/{{$article->title}}'>
+           <img id = 'imageHome' class ='img-responsive' src = '{{$image->path}}' style = ' margin-top:40px' >
            </a>
            </div>
   

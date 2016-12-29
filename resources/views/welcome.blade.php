@@ -107,12 +107,12 @@
             </div>
 
         </div>  
-        <div class="flex-center position-ref" style = 'color:black;padding:0px;background-color:white'>
+        <div class="flex-center position-ref" style = 'background-color:white'>
             <h1 >Looking for a room?</h1>
         </div>
 
-          <div class="flex-center position-ref" style = 'color:black;background-color:black'>
-          <img class = 'img-thumbnail' src = 'room1.jpg'  >
+          <div class="flex-center position-ref" style = 'color:black;background-color:grey'>
+          <img class = 'img-responsive' src = 'room1.jpg'  >
         </div>
     </body>
 </html>
