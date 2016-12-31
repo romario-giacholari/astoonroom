@@ -100,14 +100,12 @@ $(document).ready(function(){
 @foreach($articles as $article)
 
 <a href = 'articles/{{$article->title}}'>
-<div class="col-xs-6 col-md-4" id ='Posts' >
+<div class=" col-md-12" id ='Posts' >
 <div class = 'row'>
 	     
 			
 			@if(count($article->photo) > 0 )
 			<img class ='img-responsive' src = '{{$article->photo[0]->path}}'>
-			@else
-			<img class = 'img-thumbnail' style = 'width:100%' src = 'default.png' >
 			@endif
 
 
