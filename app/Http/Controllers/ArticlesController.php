@@ -134,7 +134,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $title)
     {   
     
         $this->validate($request, [
@@ -145,7 +145,7 @@ class ArticlesController extends Controller
 
          ]);
 
-            $article = Article::find($id);
+            $article = Article::where('title',$title)->first();
             $article->update($request->all());
             $article->save();
             return back();
