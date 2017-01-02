@@ -4,7 +4,17 @@
 <div class = 'container'>
 <div class = 'row'>
 <div class = "col-md-12 col-md-offset-0" >
-	
+@if(Session::has('flash_message'))
+<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style =' padding:10px:margin-bottom:10px;'>{{Session::get('flash_message')}}
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('#alert-msg').fadeIn(2000);
+  });
+</script>
+@endif	
 
 <!-- <div class="form-group">
 	  <form action = '/articles/search' method = 'GET'>
@@ -53,51 +63,31 @@
 						<div class="form-group ">
 						
 				           <form method = 'GET' action = 'articles/search'>
-						   <div class = "col-md-2 col-md-offset-0">
-								<label class="radio-inline">
-								<input type="radio" value = 'Lakeside' name="q">Lakeside
-								</label>
-								</div>
-						<div class = "col-md-2 col-md-offset-0">
-								<label class="radio-inline">
-								<input type="radio" value = 'William Murdoch' name="q">William Murdoch
-								</label>
-								</div>
-								<div class = "col-md-2 col-md-offset-0">
-								<label class="radio-inline">
-								<input type="radio" value = 'Harriet Martineau' name="q">Harriet Martineau
-								</label>
-								</div>
-								<div class = "col-md-2 col-md-offset-0">
-								<label class="radio-inline">
-								<input type="radio" value = 'Mary Sturge' name="q">Mary Sturge
-								</label>
-								</div>
-								<div class = "col-md-1 col-md-offset-0">
-								<label class="radio-inline">
-								<input type="radio" value = 'James Watt' name="q">James Watt
-								</label>
-								</div>
-								<div class = "col-md-2 col-md-offset-0">
-								<button  class = 'btn btn-info'><span class="glyphicon glyphicon-search"></span></button>
-								<div>
+							
+							  <div class = "col-md-2 col-md-offset-0">
+								<div class="form-group">
+								  <label for="sel1">Sort by location</label>
+								  <select class="form-control" id="q" name = 'q'>
+								    <option>Lakeside</option>
+								    <option>William Murdoch</option>
+								    <option>Harriet Martineau</option>
+								    <option>Mary Sturge</option>
+								    <option>James Watt</option>
+								  </select>
+								 </div>
+							  </div>
+
+								 <div class = "col-md-12 col-md-offset-0">
+								  	<button  class = 'btn btn-info'>Search</button>
+								  </div>
+								
+								
 							</form>
 						</div>
         		 </div>
         </div>
         
-	@if(Session::has('flash_message'))
-<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'padding: '>
-<h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
-</div>
 
-
-<script>
-$(document).ready(function(){
-  $('#alert-msg').fadeIn(2000);
-  });
-</script>
-@endif
 @foreach($articles as $article)
 
 <a href = 'articles/{{$article->title}}' >
