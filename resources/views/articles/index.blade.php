@@ -4,18 +4,7 @@
 <div class = 'container'>
 <div class = 'row'>
 <div class = "col-md-12 col-md-offset-0" >
-@if(Session::has('flash_message'))
-<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'padding: '>
-<h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
-</div>
-
-
-<script>
-$(document).ready(function(){
-  $('#alert-msg').fadeIn(2000);
-  });
-</script>
-@endif	
+	
 
 <!-- <div class="form-group">
 	  <form action = '/articles/search' method = 'GET'>
@@ -96,10 +85,22 @@ $(document).ready(function(){
 						</div>
         		 </div>
         </div>
-	
+        
+	@if(Session::has('flash_message'))
+<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'padding: '>
+<h1 style ='font-family:Arial, Helvetica, sans-serif;'>{{Session::get('flash_message')}}</h1>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('#alert-msg').fadeIn(2000);
+  });
+</script>
+@endif
 @foreach($articles as $article)
 
-<a href = 'articles/{{$article->title}}'>
+<a href = 'articles/{{$article->title}}' >
 <div class=" col-md-12" id ='Posts' >
 <div class = 'row'>
 	     
@@ -109,8 +110,8 @@ $(document).ready(function(){
 			@endif
 
 
-		  	<div id = 'banner' class = 'img-thumnail' style = 'margin-top:0px;background-color:#F0F5F5;min-width: 300px; padding:15px'>
-				<div class = 'row'>
+		  	<div id = 'banner' class = 'img-thumnail' style = 'font-size:2em;margin-top:0px;background-color:#F0F5F5;min-width: 300px; padding:15px'>
+				<div class = 'row' style = 'padding:40px'>
 					<h3 style = 'font-family:Arial, Helvetica, sans-serif'>{{$article->title}}</h3>
 					<div>{{$article->location}}</div>
 					<span class="glyphicon glyphicon-eye-open"></span> {{$article->views}} 

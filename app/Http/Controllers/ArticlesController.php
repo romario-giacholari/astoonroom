@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Article;
 use App\Photo;
+use App\User;
 use \Cache;
 
 

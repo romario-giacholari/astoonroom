@@ -14,7 +14,6 @@ class Article extends Model
        'contact',
        'gender',
        'year',
-       'color'
 
     ];
 
