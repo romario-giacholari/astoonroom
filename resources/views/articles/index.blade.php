@@ -4,7 +4,7 @@
 <div class = 'row'>
 <div class = "col-md-12 col-md-offset-0" >
 @if(Session::has('flash_message'))
-<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style =' padding:10px:margin-bottom:10px;'>{{Session::get('flash_message')}}
+<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'margin-top:0px;'>{{Session::get('flash_message')}}
 </div>
 
 
@@ -13,23 +13,8 @@ $(document).ready(function(){
   $('#alert-msg').fadeIn(2000);
   });
 </script>
-@endif	
+@endif	 
 
-<!-- <div class="form-group">
-	  <form action = '/articles/search' method = 'GET'>
-	 	<input style = ' font-size:2em;font-family:Arial, Helvetica, sans-serif; ' class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'Search'  required>
-	 	
-	 	<!-- <label for="Location">Sort by</label>
-	 	 <select class="form-control" id="sort" name = 'sort'>
-                <option>location</option>
-                <option>year</option>
-                <option>created_at</option>
-                <option>gender</option>
-                 <option>views</option>
-              </select> 
-	 </form>
-</div>
--->
 <script>
 
  $(document).ready(function(){
@@ -76,8 +61,8 @@ $(document).ready(function(){
 								 </div>
 							  </div>
 
-								 <div class = "col-md-12 col-md-offset-0">
-								  	<input type = 'submit'  class = 'btn btn-info'>
+								 <div class = "col-md-0 col-md-offset-0" style = 'padding:24px'>
+								  	<input type = 'submit' value = 'search'  class = 'btn btn-info'>
 								  </div>
 								
 								
