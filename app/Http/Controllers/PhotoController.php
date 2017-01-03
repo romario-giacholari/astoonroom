@@ -54,6 +54,7 @@ class PhotoController extends Controller
         //$article = Article::find($id);
 
         $request->file('file')->store('articles', 's3');
+        return 'hit';
         /*
         $file = $request->file('file');
         $name = time().$file->getClientOriginalName();
