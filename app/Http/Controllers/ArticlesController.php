@@ -22,6 +22,7 @@ class ArticlesController extends Controller
     {
 
         $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
+        return User::all();
         //$articles = Cache::remember('articles', 60, function()
         //{
         //    return Article::orderBy('views', 'desc')->get();
