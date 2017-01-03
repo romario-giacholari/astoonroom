@@ -53,20 +53,22 @@ class PhotoController extends Controller
 
         //$article = Article::find($id);
 
+        $request->file('file')->store('articles', 's3');
+        /*
         $file = $request->file('file');
         $name = time().$file->getClientOriginalName();
         $s3 = \Storage::disk('s3');
-        $filePath = '/astonroom/' . $name;
+        $filePath = 'astonroom/' . $name;
         $s3->put($filePath, file_get_contents($file));
-        /*
-        $file->move('article/photos', $name);
         */
+    /* $file->move('article/photos', $name);
+       
         $path = $request->file->path();
         $thumbnail = new Photo;
         $thumbnail->path = '/article/photos/'.$name;
         $thumbnail->article_id = $article->id;
         $thumbnail->save();
-        
+        */
 
     }
 
