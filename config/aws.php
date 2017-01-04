@@ -9,9 +9,9 @@ return [
         'secret' => env('S3_SECRET'),
         'region' => env('S3_REGION'),
         'bucket' => env('S3_BUCKET'),
+        'http' => ['verify' => false],
     ],
     'region' => env('S3_REGION'),
-    'http' => ['verify' => public_path().'/cert-WHHFSCVB6SMXPOJLDFK26TPOTNWSZAU3.pem'],
     'version' => 'latest',
 
 ];
