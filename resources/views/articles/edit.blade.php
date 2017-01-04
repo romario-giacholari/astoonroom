@@ -112,7 +112,7 @@ $(document).ready(function(){
 
   <div class = "col-md-12 col-md-offset-0  jumbotron" style = 'margin-top:80px'>
     <h2 style ='font-family:Arial, Helvetica, sans-serif;'>Upload image and click ok</h2>
-  <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos/' method = 'POST' style = 'margin-top:20px'>
+  <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos' method = 'POST' style = 'margin-top:20px'>
 
   {{csrf_field()}}
 

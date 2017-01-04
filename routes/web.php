@@ -25,7 +25,7 @@ Route::get('/articles/{title}/edit', 'ArticlesController@edit');
 Route::patch('/articles/{title}/update', 'ArticlesController@update');
 Route::get('/articles/search', 'ArticlesController@search');
 
-Route::post('/articles/{id}/photos/', 'PhotoController@store');
+Route::post('/articles/{id}/photos', 'PhotoController@store');
 Route::delete('/photos/{id}', 'PhotoController@destroy');
 
 
