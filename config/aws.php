@@ -9,7 +9,7 @@ return [
         'key'    => getenv('S3_KEY'),
         'secret' => getenv('S3_SECRET'),
         'region' => 'eu-west-2',
-        'bucket' => getenv('S3_BUCKET'),
+        'bucket' => 'aston-room',
         'version' => 'latest',
     ],
 
