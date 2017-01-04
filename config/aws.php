@@ -11,7 +11,9 @@ return [
         'bucket' => env('S3_BUCKET'),
     ],
     'region' => env('S3_REGION'),
+    'http' => ['verify' => public_path().'/cert-WHHFSCVB6SMXPOJLDFK26TPOTNWSZAU3.pem'],
     'version' => 'latest',
+
 ];
 
  	
