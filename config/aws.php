@@ -10,9 +10,9 @@ return [
         'secret' => getenv('S3_SECRET'),
         'region' => getenv('S3_REGION'),
         'bucket' => getenv('S3_BUCKET'),
+        'version' => 'latest',
     ],
 
-    'version' => 'latest',
     'http' => [
 
     	'verify' => public_path('cert-WHHFSCVB6SMXPOJLDFK26TPOTNWSZAU3.pem')
