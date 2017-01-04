@@ -36,6 +36,7 @@ Route::get('/articles/', 'ArticlesController@index');
 Route::get('/articles/{title}', 'ArticlesController@show');
 Route::get('/articles/search', 'ArticlesController@search');
 
+/*
 Route::any('/{catchall}/', function() {
   return redirect('/');
 })->where('catchall', '.*');
@@ -48,4 +49,4 @@ Route::any('/articles/{catchall}/', function() {
   return redirect('/');
 })->where('catchall', '.*');
 
-
+*/
