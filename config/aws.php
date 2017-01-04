@@ -6,13 +6,13 @@ use Aws\Laravel\AwsServiceProvider;
 return [
     'credentials' => [
         
-        'key'    => 'AWS_KEY',
-        'secret' => 'AWS_SECRET',
-        'region' => 'eu-west-2',
-        'bucket' => 'aston-room',
+        'key'    => getenv('S3_KEY'),
+        'secret' => getenv('S3_SECRET'),
+        'bucket' => getenv('S3_BUCKET'),
         'version' => 'latest',
     ],
 
+   'region' => 'eu-west-2',
     'http' => [
 
     	'verify' => public_path('cert-WHHFSCVB6SMXPOJLDFK26TPOTNWSZAU3.pem')

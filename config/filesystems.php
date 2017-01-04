@@ -59,7 +59,7 @@ return [
             'key' => env('S3_KEY'),
             'secret' => env('S3_SECRET'),
             'region' => 'eu-west-2',
-            'bucket' => 'aston-room',
+            'bucket' => env('S3_BUCKET'),
         ],
 
     ],
