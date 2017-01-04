@@ -8,7 +8,7 @@ return [
         
         'key'    => getenv('S3_KEY'),
         'secret' => getenv('S3_SECRET'),
-        'region' => getenv('S3_REGION'),
+        'region' => 'eu-west-2',
         'bucket' => getenv('S3_BUCKET'),
         'version' => 'latest',
     ],
