@@ -56,6 +56,7 @@ $(document).ready(function(){
                 <option>James Watt</option>
                 <option>Harriet Martineau</option>
                  <option>Mary Sturge</option>
+                 <option>Birmingham</option>
               </select>
             <small  class="form-text text-muted">Provide the location of the accommodation</small>
           </div>

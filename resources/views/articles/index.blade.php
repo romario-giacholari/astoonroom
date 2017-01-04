@@ -57,6 +57,7 @@ $(document).ready(function(){
 								    <option>Harriet Martineau</option>
 								    <option>Mary Sturge</option>
 								    <option>James Watt</option>
+								    <option>Birmingham</option>
 								  </select>
 								 </div>
 							  </div>
