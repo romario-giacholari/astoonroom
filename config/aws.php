@@ -6,10 +6,10 @@ use Aws\Laravel\AwsServiceProvider;
 return [
     'credentials' => [
         
-        'key'    => env('S3_KEY'),
-        'secret' => env('S3_SECRET'),
-        'region' => env('S3_REGION'),
-        'bucket' => env('S3_BUCKET'),
+        'key'    => getenv('S3_KEY'),
+        'secret' => getenv('S3_SECRET'),
+        'region' => getenv('S3_REGION'),
+        'bucket' => getenv('S3_BUCKET'),
     ],
 
     'version' => 'latest',
