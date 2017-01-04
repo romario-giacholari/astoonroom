@@ -9,7 +9,6 @@ use App\Photo;
 use App\User;
 use \Cache;
 
-
 class ArticlesController extends Controller
 {
     /**

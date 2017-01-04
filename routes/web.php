@@ -37,15 +37,15 @@ Route::get('/articles/{title}', 'ArticlesController@show');
 Route::get('/articles/search', 'ArticlesController@search');
 
 Route::any('/{catchall}/', function() {
-  return back();
+  return redirect('/');
 })->where('catchall', '.*');
 
 Route::any('/articles/{id}/{catchall}', function() {
-  return back();
+  return redirect('/');
 })->where('catchall', '.*');
 
 Route::any('/articles/{catchall}/', function() {
-  return back();
+  return redirect('/');
 })->where('catchall', '.*');
 
 

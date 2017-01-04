@@ -62,7 +62,9 @@ $(document).ready(function(){
 							  </div>
 
 								 <div class = "col-md-0 col-md-offset-0" style = 'padding:24px'>
-								  	<input type = 'submit' value = 'search'  class = 'btn btn-info'>
+								 <button type="submit" class="btn btn-info">
+							          <span class="glyphicon glyphicon-search"></span> 
+							        </button>
 								  </div>
 								
 								
