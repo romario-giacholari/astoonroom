@@ -61,20 +61,6 @@
   @include ('articles.form', ['submitButton'=>'Post'])
         
    </form>
-@else
-@foreach($articles as $article)
- @foreach($article->photo as $image)
-
-          <div class = "col-md-4 col-md-offset-0 ">
-            <a href = 'articles/{{$article->title}}'>
-           <img id = 'imageHome' class ='img-responsive' src = '{{$image->path}}' style = ' margin-top:40px' >
-           </a>
-           </div>
-  
-    @endforeach
-  @endforeach
-
-
 @endif
 
 </div>
