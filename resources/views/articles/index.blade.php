@@ -42,13 +42,13 @@ $(document).ready(function(){
         @endforeach	
         @endforeach
         <div>
-        	<div class = "col-md-12 col-md-offset-0 ">
+        	<div class = " col-md-12 col-md-offset-0 ">
 				<div class = 'row'>
 						<div class="form-group ">
 						
 				           <form method = 'GET' action = 'articles/search'>
 							
-							  <div class = "col-md-2 col-md-offset-0">
+							  <div class = " col-xs-8 col-md-2 col-md-offset-0">
 								<div class="form-group" >
 								  <label for="sel1">Sort by location</label>
 								  <select required class="form-control" id="q" name = 'q'>
@@ -62,7 +62,7 @@ $(document).ready(function(){
 								 </div>
 							  </div>
 
-								 <div class = "col-md-0 col-md-offset-0" style = 'padding:24px'>
+								 <div class = " col-md-0 col-md-offset-0" style = 'padding:24px'>
 								 <button type="submit" class="btn btn-info">
 							          <span class="glyphicon glyphicon-search"></span> 
 							        </button>
@@ -80,7 +80,7 @@ $(document).ready(function(){
   <div class="row">
     <div class="thumbnail">
     @if(count($article->photo) > 0)
-      <img  class = 'img-responsive' src = '{{$article->photo[0]->path}}' >
+      <img  class = 'img-responsive' src = '{{$article->photo[0]->path}}' alt ='{{$article->title}}' >
       @endif
       <div class="caption">
         <h3>{{$article->title}}</h3>
