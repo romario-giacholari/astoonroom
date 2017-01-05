@@ -19,7 +19,6 @@ class ArticlesController extends Controller
     public function index()
 
     {
-
         $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
         //$articles = Cache::remember('articles', 60, function()
         //{
@@ -74,9 +73,9 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($title)
+    public function show($id)
     {
-        $articles = Article::where('title', $title)->first();
+        $articles = Article::findOrFail($id);
          if($articles == null)
         {
             return back();

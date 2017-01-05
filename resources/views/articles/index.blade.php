@@ -76,7 +76,7 @@ $(document).ready(function(){
         
 
 @foreach($articles as $article)
-<a href = 'articles/{{$article->title}}'>
+<a href = 'articles/{{$article->id}}'>
 <div class = "col-md-12 col-md-offset-0 jumbotron" id ="Posts"  style = 'margin-top:10px' >
 	
 		 <div class="col-md-6 col-md-offset-0 form-group">
