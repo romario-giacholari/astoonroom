@@ -76,37 +76,23 @@ $(document).ready(function(){
         
 
 @foreach($articles as $article)
-<a href = 'articles/{{$article->id}}'>
-<div class = "col-md-12 col-md-offset-0 jumbotron" id ="Posts"  style = 'margin-top:10px' >
-	
-		 <div class="col-md-6 col-md-offset-0 form-group">
-		 <div>Views: {{$article->views}}</div>
-		 <div>Year: {{$article->year}}</div>
-		  <div >Contact info: 
-		     @if($article->contact)
-		     Provided
-		     @else
-		     None given
-		     @endif
-		     </div>
-		     <div>Location: {{$article->location}}</div>
-		     <div>Gender: {{$article->gender}}</div>
-		     <div> {{$article->created_at->diffForHumans()}}</div>
-		    <label style = 'width:100%;font-family:Arial, Helvetica, sans-serif;'><h2>{{$article->title}}</h2></label>
-		 </div>
-	
-		@if(count($article->photo) > 0)
-	     <div class = "col-md-6 col-md-offset-0">
-		 	<div class = 'row'>
-				<img  class = 'img-responsive' src = '{{$article->photo[0]->path}}' height = "250px" width="230px" >
-			</div>
-		 </div>
-		@endif
+  <div class="col-sm-6 col-md-3">
+  <div class="row">
+    <div class="thumbnail">
+    @if(count($article->photo) > 0)
+      <img  class = 'img-responsive' src = '{{$article->photo[0]->path}}' >
+      @endif
+      <div class="caption">
+        <h3>{{$article->title}}</h3>
+        <p>{{$article->body}}</p>
+        <p>Location:{{$article->location}}</p>
+        <p><span class = 'glyphicon glyphicon-eye-open' ></span> {{$article->views}}</p>
+        <p><a href="articles/{{$article->id}}" class="btn btn-primary" role="button">View</a> </p>
+      </div>
+    </div>
+  </div>
 </div>
-
-</a>
-
-  
+	
 @endforeach
 	</div>
 		
