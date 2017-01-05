@@ -51,7 +51,7 @@ $(document).ready(function(){
 <a href = '{{$article->title}}'>
 <div class = "col-md-12 col-md-offset-0 jumbotron" id ="Posts"  >
 	
-		 <div class="col-md-3 col-md-offset-0 form-group">
+		 <div class="col-md-6 col-md-offset-0 form-group">
 		 <div>Views: {{$article->views}}</div>
 		 <div>Year: {{$article->year}}</div>
 		  <div >Contact info: 
@@ -68,7 +68,7 @@ $(document).ready(function(){
 		 </div>
 	
 		@if(count($article->photo) > 0)
-	     <div class = "col-md-9 col-md-offset-0">
+	     <div class = "col-md-6 col-md-offset-0">
 		 	<div class = 'row'>
 				<img class = 'img-responsive' src = '{{$article->photo[0]->path}}' height = "250px" width="230px" >
 			</div>
