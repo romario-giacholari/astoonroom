@@ -82,8 +82,8 @@
         text-decoration: none;
     }
 
-    #imageHome:hover{
-        opacity:0.6;
+    #mainImage:hover{
+        opacity:0.8;
     }
 
     </style>

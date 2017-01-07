@@ -16,9 +16,10 @@ class ArticlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
 
     {
+        //return $request->ip();
         $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
         //$articles = Cache::remember('articles', 60, function()
         //{
