@@ -22,7 +22,7 @@
         <style>
             html, body {
                 background-color:white;
-                color: black;
+                color: #636b6f;
                 font-family: 'Arial', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -38,8 +38,6 @@
                 align-items: center;
                 display: flex;
                 justify-content: center;
-                background-color:#FF3329;
-                color:white;
             }
 
             .position-ref {
@@ -66,7 +64,7 @@
             }
 
             .links > a {
-                color:white;
+                color: #636b6f;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -84,9 +82,9 @@
             }
         </style>
     </head>
-    <body>
+    <body  >
        
-        <div class="flex-center position-ref full-height" style = ' height:30%; width:100%; opacity:1'>
+        <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:1'>
             <div class="content">
                 <div class="title m-b-md">
                     <h1 style ='font-family:Arial, Helvetica, sans-serif;'>AstonRoom</h1>
@@ -110,10 +108,9 @@
             </div>
 
         </div>  
-    
-
-          <div class = " col-md-12 col-md-offset-0 jumbotron" >
-                <div class = 'container'>
+        <hr>
+          <div class = " col-md-12 col-md-offset-0 " >
+          <div class = 'container'>
                 <div class = 'row'>
 
                         <div class="form-group ">
@@ -158,30 +155,5 @@
         </div>
       </div>
     @endif
-  
-    <div id="map" style="width:100%;height:500px"></div>
-
-
-<script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  geocoder.geocode( {'address': 'UK' }, function(results, status) {
-      response($.map(results, function(item) {
-        var latlng = new google.maps.LatLng( item.geometry.location.lat(), item.geometry.location.lng()); 
-        var myOptions = {
-            zoom: 3,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }; 
-        var map = new google.maps.Map(mapCanvas, myOptions);
-      }));
-    });
-  }
-
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-
     </body>
 </html>
