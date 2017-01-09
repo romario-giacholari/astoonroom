@@ -109,7 +109,7 @@
 
         </div>  
         <div class="flex-center position-ref" style = 'background-color:white'>
-            <h1 >Looking for a room?</h1>
+            <h2 style = 'font-family:Arial;'>Looking for a room?</h2>
         </div>
 
           <div class="flex-center position-ref" style = 'color:black;background-color:grey'>

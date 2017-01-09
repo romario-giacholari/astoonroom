@@ -167,9 +167,8 @@ class ArticlesController extends Controller
 
         public function search(Request $request)
         {
-             $search = $request->q;
-            
-            
+        
+        $search = $request->q;
             
          $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
 
@@ -179,7 +178,7 @@ class ArticlesController extends Controller
                   
                   if(count($articles) == 0){
 
-                $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
+                     $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
                         
                         if(count($articles) == 0){
                             \Session::flash('flash_message','No results');
