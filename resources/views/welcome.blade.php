@@ -23,7 +23,7 @@
             html, body {
                 background-color:white;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Arial', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -82,7 +82,7 @@
             }
         </style>
     </head>
-    <body style = 'background-color:#F8F8F8;' >
+    <body  >
        
         <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:1'>
             <div class="content">
@@ -108,12 +108,54 @@
             </div>
 
         </div>  
-        <div class="flex-center position-ref" style = 'background-color:white'>
-            <h2 style = 'font-family:Arial;'>Looking for a room?</h2>
+        <hr>
+        <div class="flex-center position-ref" >
+            <p style = 'font-size:2em'>Looking for a room?</p>
         </div>
 
-          <div class="flex-center position-ref" style = 'color:black;background-color:grey'>
-          <img class = 'img-responsive' src = 'room1.jpg'  >
+          <div class = " col-md-12 col-md-offset-0 " >
+          <div class = 'container'>
+                <div class = 'row'>
+                        <div class="form-group ">
+                        
+                           <form method = 'GET' action = 'articles/search'>
+                            
+                              <div class = "  col-xs-8 col-md-11 col-md-offset-0">
+                                <div class="form-group" >
+                                  <label for="sel1">Sort by location</label>
+                                  <select required class="form-control" id="q" name = 'q'>
+                                    <option>Lakeside</option>
+                                    <option>William Murdoch</option>
+                                    <option>Harriet Martineau</option>
+                                    <option>Mary Sturge</option>
+                                    <option>James Watt</option>
+                                    <option>Birmingham</option>
+                                  </select>
+                                 </div>
+                              </div>
+
+                                 <div class = " col-md-0 col-md-offset-0" style = 'padding:24px'>
+                                 <button type="submit" class="btn btn-info">
+                                      <span class="glyphicon glyphicon-search"></span> 
+                                    </button>
+                                  </div>
+                                
+                                
+                            </form>
+                        </div>
+                 </div>
         </div>
+      </div>
+
+      @if(Session::has('flash_message'))
+      <div class =' container'>
+       <div class = 'row'>
+        <div class = ' col-md-12'>
+            <div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'margin-top:0px;'>  <p>{{Session::get('flash_message')}}</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    @endif
     </body>
 </html>
