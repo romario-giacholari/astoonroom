@@ -165,12 +165,18 @@
 <script>
 function myMap() {
   var mapCanvas = document.getElementById("map");
-  var latlng = new google.maps.LatLng( item.geometry.location.lat(), item.geometry.location.lng()); 
-  var mapOptions = {
-    center: latlng, 
-    zoom: 10
+  geocoder.geocode( {'address': 'UK' }, function(results, status) {
+      response($.map(results, function(item) {
+        var latlng = new google.maps.LatLng( item.geometry.location.lat(), item.geometry.location.lng()); 
+        var myOptions = {
+            zoom: 3,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }; 
+        var map = new google.maps.Map(mapCanvas, myOptions);
+      }));
+    });
   }
-  var map = new google.maps.Map(mapCanvas, mapOptions);
 
 }
 </script>
