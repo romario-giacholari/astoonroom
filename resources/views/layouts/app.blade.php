@@ -150,18 +150,8 @@
                             </li>
                         @endif
                         <li style = 'padding:10px'>
-                       <form action = '/articles/search' method = 'GET'>
-                            <input  class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
-                           
-                        
-                        <!-- <label for="Location">Sort by</label>
-                         <select class="form-control" id="sort" name = 'sort'>
-                                <option>location</option>
-                                <option>year</option>
-                                <option>created_at</option>
-                                <option>gender</option>
-                                 <option>views</option>
-                              </select> -->
+                            <form action = '/articles/search' method = 'GET'>
+                                <input  class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
                             </form>
                         </li>
                     </ul>
