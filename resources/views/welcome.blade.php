@@ -110,7 +110,7 @@
         </div>  
         <hr>
         <div class="flex-center position-ref" >
-            <p style = 'font-size:2em'>Looking for a room?</p>
+            <p style = 'font-size:1em'>Looking for a room within Aston University?</p>
         </div>
 
           <div class = " col-md-12 col-md-offset-0 " >
@@ -120,7 +120,7 @@
                         
                            <form method = 'GET' action = 'articles/search'>
                             
-                              <div class = "  col-xs-8 col-md-11 col-md-offset-0">
+                              <div class = "  col-xs-12 col-md-11 col-md-offset-0">
                                 <div class="form-group" >
                                   <label for="sel1">Sort by location</label>
                                   <select required class="form-control" id="q" name = 'q'>
