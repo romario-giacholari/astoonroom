@@ -23,7 +23,7 @@
           <td>{{$article->title}}</td>
           <td>{{$article->views}}</td>
                <td style = 'height:100%;'>
-              <a href="articles/{{$article->title}}/edit">
+              <a href="articles/{{$article->id}}/edit">
                 <button class = 'btn btn-success btn-sm pull-left'>edit</button>
               </a>
          </td>

@@ -21,8 +21,8 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', 'HomeController@index');
 Route::post('/article/store', 'ArticlesController@store');
 Route::delete('/articles/{id}/delete', 'ArticlesController@destroy');
-Route::get('/articles/{title}/edit', 'ArticlesController@edit');
-Route::patch('/articles/{title}/update', 'ArticlesController@update');
+Route::get('/articles/{id}/edit', 'ArticlesController@edit');
+Route::patch('/articles/{id}/update', 'ArticlesController@update');
 Route::get('/articles/search', 'ArticlesController@search');
 
 Route::post('/articles/{id}/photos', 'PhotoController@store');

@@ -111,9 +111,9 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($title)
+    public function edit($id)
     {
-        $articles = Article::where('title',$title)->first();
+        $articles = Article::findOrFail($id);
 
         if($articles->user_id == Auth::user()->id)
         {
@@ -133,7 +133,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $title)
+    public function update(Request $request, $id)
     {   
     
         $this->validate($request, [
@@ -144,7 +144,7 @@ class ArticlesController extends Controller
 
          ]);
 
-            $article = Article::where('title',$title)->first();
+            $article = Article::findOrFail($id);
             $article->update($request->all());
             $article->save();
             return back();
