@@ -55,14 +55,8 @@ class ArticlesController extends Controller
          ]);
 
         $user = Auth::user();
-        $article = new Article;
+        $article = new Article($request->all());
         $article->user_id = $user->id;
-        $article->title = $request->title;
-        $article->contact = $request->contact;
-        $article->location = $request->location;
-        $article->gender = $request->gender;
-        $article->year = $request->year;
-        $article->body = $request->body;
         $article->save();
         \Session::flash('flash_message','Your ad has been created');
         return redirect('articles/'.$article->title.'/edit');
