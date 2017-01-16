@@ -23,69 +23,49 @@
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
-
-
     </script>
 
     <script>
-
  $(document).ready(function(){
             $('#search').click(function(){
-
                 $('#whole').css({ "opacity":"0.1"});
-
             });
-
              $('#whole').hover(function(){
-
                 $('body').css({ "opacity":"1"});
-
             });
-
         });
         </script>
 
 
     <style>
     body{
-
         background-color:white;
     }
-
         #Posts:hover{
         color:blue;
         opacity:0.8;
     }
-
     #AD{
          border-style: ridge;
          border-color: black;
          
       
     }
-
     #Posts{
          padding:15px;
          overflow:hidden;
          
-
     }
-
   
-
     #pills{
         margin-bottom:5px;
     }
-
-
     #nah:hover{
         text-decoration: none;
     }
-
     #mainImage:hover{
         opacity:0.8;
     }
-
     </style>
 </head>
 <body>
