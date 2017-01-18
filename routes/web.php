@@ -1,4 +1,5 @@
 <?php
+use App\Article;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,11 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+
+	$articles = Article::all();
+	$count = count($articles);;
+    return view('welcome', compact('count'));
+
 });
 Auth::routes();
 

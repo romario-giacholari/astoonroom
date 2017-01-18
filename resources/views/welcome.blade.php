@@ -155,5 +155,12 @@
         </div>
       </div>
     @endif
+    <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:1'>
+            <div class="content">
+                <div class="title m-b-md">
+                    <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Available room(s): <a href ='/articles'>#{{$count}}</a>
+                </div>
+                </div>
+                </div>
     </body>
 </html>
