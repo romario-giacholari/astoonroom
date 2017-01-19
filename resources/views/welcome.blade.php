@@ -22,7 +22,7 @@
         <style>
             html, body {
                 background-color:white;
-                color: #636b6f;
+                color: black;
                 font-family: 'Arial', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -64,9 +64,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color:white;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size:px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -80,14 +80,27 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            #img{
+                background-image: url('http://iecabroad.com/wp-content/uploads/2016/03/1-Aston-Banner.jpg');
+
+    /* Full height */
+    height:100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+            }
+
         </style>
     </head>
     <body  >
        
-        <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:1'>
+        <div  id = 'img' class="flex-center position-ref full-height" >
             <div class="content">
                 <div class="title m-b-md">
-                    <h1 style ='font-family:Arial, Helvetica, sans-serif;'>AstonRoom</h1>
+                    <h1 style ='color:white;font-family:Arial, Helvetica, sans-serif;'>AstonRoom</h1>
                 </div>
 
                 <div class="links">
@@ -155,10 +168,10 @@
         </div>
       </div>
     @endif
-    <div class="flex-center position-ref full-height" style = 'background-color:white; height:30%; width:100%; opacity:1'>
+    <div class="flex-center position-ref full-height" style = ' height:30%; width:100%; opacity:1'>
             <div class="content">
                 <div class="title m-b-md">
-                    <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Available room(s): <a href ='/articles'>#{{$count}}</a>
+                    <h1 style ='font-family:Arial, Helvetica, sans-serif; padding:10px;'>Available room(s): <a href ='/articles'>#{{$count}}</a>
                 </div>
                 </div>
                 </div>
