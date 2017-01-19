@@ -66,7 +66,7 @@
             .links > a {
                 color:white;
                 padding: 0 25px;
-                font-size:px;
+                font-size:11px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -82,15 +82,11 @@
             }
 
             #img{
-                background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/67/Birmingham_canalside_apartments_at_dusk.jpg');
-
-    /* Full height */
-    height:55%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+                background-image: url('http://i1.birminghampost.co.uk/business/creative/article8920108.ece/ALTERNATES/s1227b/Verity-Milligan_01.jpg');
+                height:100%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
 
         </style>
@@ -179,7 +175,7 @@
   <div class="flex-center position-ref full-height" style = ' height:5%; width:100%; opacity:1'>
             <div class="content">
                 <div class="title m-b-md">
-                    <p >Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name'>Romario Giacholari</a></p>
+                    <p >Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
                 </div>
                 </div>
                 </div>
