@@ -70,7 +70,7 @@ $(document).ready(function(){
 		@if(count($article->photo) > 0)
 	     <div class = "col-md-6 col-md-offset-0">
 		 	<div class = 'row'>
-				<img class = 'img-responsive' src = '{{$article->photo[0]->path}}' height = "250px" width="230px" >
+				<img class = 'img-thumbnail' src = '{{$article->photo[0]->path}}' height = "250px" width="230px" >
 			</div>
 		 </div>
 		 @endif

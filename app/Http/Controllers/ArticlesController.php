@@ -70,10 +70,10 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        $articles = Article::findOrFail($id);
-         if($articles == null)
+        $articles = Article::find($id);
+         if(count($articles) <1)
         {
-            return back();
+            return redirect('/articles');
         }
 
         $image = Photo::find($articles->id);
@@ -159,13 +159,13 @@ class ArticlesController extends Controller
 
 
 
-        public function search(Request $request)
-        {
+    public function search(Article $articles ,Request $request)
+    {
         
         $search = $request->q;
 
             
-         $articles = Article::with('photo')->where("location", 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
+         $articles = Article::with('photo')->where('location', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
 
            if(count($articles) == 0){
 

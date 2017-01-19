@@ -11,7 +11,6 @@ use App\Article;
 |
 */
 
-
 Route::get('/', function () {
 
 	$articles = Article::all();
@@ -28,7 +27,6 @@ Route::post('/article/store', 'ArticlesController@store');
 Route::delete('/articles/{id}/delete', 'ArticlesController@destroy');
 Route::get('/articles/{id}/edit', 'ArticlesController@edit');
 Route::patch('/articles/{id}/update', 'ArticlesController@update');
-Route::get('/articles/search', 'ArticlesController@search');
 
 Route::post('/articles/{id}/photos', 'PhotoController@store');
 Route::delete('/photos/{id}', 'PhotoController@destroy');
@@ -36,10 +34,10 @@ Route::delete('/photos/{id}', 'PhotoController@destroy');
 
 
 });
-
+Route::get('/articles/search/', 'ArticlesController@search');
 Route::get('/articles/', 'ArticlesController@index');
 Route::get('/articles/{id}', 'ArticlesController@show');
-Route::get('/articles/search', 'ArticlesController@search');
+
 
 /*
 Route::any('/{catchall}/', function() {
