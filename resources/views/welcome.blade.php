@@ -57,7 +57,7 @@
             }
 
             .title {
-                font-size: 34px;
+                font-size: 14px;
                 width:100%;
                 height:100%;
                 font-weight: 600;
@@ -82,7 +82,7 @@
             }
 
             #img{
-                background-image: url('http://iecabroad.com/wp-content/uploads/2016/03/1-Aston-Banner.jpg');
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/67/Birmingham_canalside_apartments_at_dusk.jpg');
 
     /* Full height */
     height:55%; 
@@ -127,7 +127,7 @@
                 <div class = 'row'>
 
                         <div class="form-group ">
-                          <p style = 'margin-left:15px'>Looking for a room within Aston University?</p>
+                          <p style = 'margin-left:15px'>Looking for a room within Birmingham?</p>
 
                            <form method = 'GET' action = 'articles/search'>
                             
@@ -172,6 +172,14 @@
             <div class="content">
                 <div class="title m-b-md">
                     <h3 style ='font-family:Arial, Helvetica, sans-serif; padding:10px;'>Available room(s): <a href ='/articles'>#{{$count}}</a></h3>
+                </div>
+                </div>
+                </div>
+
+  <div class="flex-center position-ref full-height" style = ' height:5%; width:100%; opacity:1'>
+            <div class="content">
+                <div class="title m-b-md">
+                    <p >Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name'>Romario Giacholari</a></p>
                 </div>
                 </div>
                 </div>
