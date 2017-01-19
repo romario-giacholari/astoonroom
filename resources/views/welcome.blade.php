@@ -85,7 +85,7 @@
                 background-image: url('http://iecabroad.com/wp-content/uploads/2016/03/1-Aston-Banner.jpg');
 
     /* Full height */
-    height:100%; 
+    height:55%; 
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -168,10 +168,10 @@
         </div>
       </div>
     @endif
-    <div class="flex-center position-ref full-height" style = ' height:30%; width:100%; opacity:1'>
+    <div class="flex-center position-ref full-height" style = ' height:10%; width:100%; opacity:1'>
             <div class="content">
                 <div class="title m-b-md">
-                    <h1 style ='font-family:Arial, Helvetica, sans-serif; padding:10px;'>Available room(s): <a href ='/articles'>#{{$count}}</a>
+                    <h3 style ='font-family:Arial, Helvetica, sans-serif; padding:10px;'>Available room(s): <a href ='/articles'>#{{$count}}</a></h3>
                 </div>
                 </div>
                 </div>
