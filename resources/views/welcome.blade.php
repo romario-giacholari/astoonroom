@@ -83,7 +83,7 @@
 
             #img{
                 background-image: url('http://i1.birminghampost.co.uk/business/creative/article8920108.ece/ALTERNATES/s1227b/Verity-Milligan_01.jpg');
-                height:100%; 
+                height:55%; 
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -172,10 +172,10 @@
                 </div>
                 </div>
 
-  <div class="flex-center position-ref full-height" style = ' height:5%; width:100%; opacity:1'>
+  <div class="flex-center position-ref full-height" style = 'padding:20px; height:15%; width:100%;'>
             <div class="content">
                 <div class="title m-b-md">
-                    <p >Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
+                    <p>Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
                 </div>
                 </div>
                 </div>

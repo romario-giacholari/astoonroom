@@ -56,10 +56,9 @@ class ArticlesController extends Controller
 
         $user = Auth::user();
         $article = new Article($request->all());
-        $article->user_id = $user->id;
-        $article->save();
+        $user->articles()->save($article);
         \Session::flash('flash_message','Your ad has been created');
-        return redirect('articles/'.$article->title.'/edit');
+        return redirect('articles/'.$article->id.'/edit');
     }
 
     /**
@@ -70,19 +69,21 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        $articles = Article::find($id);
+         $articles = Article::find($id);
+
          if(count($articles) <1)
-        {
+         {
             return redirect('/articles');
-        }
+         }
 
         $image = Photo::find($articles->id);
+
         if(Auth::user())
         {
             if($articles->user_id != Auth::user()->id)
             {
-            $articles->views += 1;
-            $articles->save();
+                $articles->views += 1;
+                $articles->save();
             }  
         }
 
@@ -93,8 +94,6 @@ class ArticlesController extends Controller
             $articles->save();
         }
         
-       
-
         return view('articles.show', compact('articles','image'));
          
     }
@@ -163,7 +162,6 @@ class ArticlesController extends Controller
     {
         
         $search = $request->q;
-
             
          $articles = Article::with('photo')->where('location', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
 

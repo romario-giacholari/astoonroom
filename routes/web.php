@@ -39,17 +39,19 @@ Route::get('/articles/', 'ArticlesController@index');
 Route::get('/articles/{id}', 'ArticlesController@show');
 
 
-/*
-Route::any('/{catchall}/', function() {
-  return redirect('/');
-})->where('catchall', '.*');
 
 Route::any('/articles/{id}/{catchall}', function() {
   return redirect('/');
 })->where('catchall', '.*');
 
+
+Route::any('/{catchall}/', function() {
+  return redirect('/');
+})->where('catchall', '.*');
+
+
 Route::any('/articles/{catchall}/', function() {
   return redirect('/');
 })->where('catchall', '.*');
 
-*/
+
