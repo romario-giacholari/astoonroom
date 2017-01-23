@@ -19,10 +19,11 @@ Route::get('/', function () {
 
 });
 
+Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
 
-Auth::routes();
+
 Route::get('/home', 'HomeController@index');
 Route::post('/article/store', 'ArticlesController@store');
 Route::delete('/articles/{id}/delete', 'ArticlesController@destroy');

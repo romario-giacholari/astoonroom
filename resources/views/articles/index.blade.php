@@ -34,15 +34,15 @@ $(document).ready(function(){
         </script>
 @foreach($articles as $article)
   @foreach($article->photo as $thumbnail)
-	@if(count($thumbnail)>0)
-        <div   id = 'whole'>
-        @else
-        <div id = 'whole' style = 'height:200px;'>
-        @endif
-        @endforeach	
-        @endforeach
-        <div>
-        	<div class = " col-md-12 col-md-offset-0 ">
+    @if(count($thumbnail)>0)
+          <div   id = 'whole'>
+          @else
+          <div id = 'whole' style = 'height:200px;'>
+    @endif
+  @endforeach	
+@endforeach
+    <div>
+        <div class = " col-md-12 col-md-offset-0 ">
 				<div class = 'row'>
 						<div class="form-group ">
 						
@@ -80,9 +80,9 @@ $(document).ready(function(){
   <div class="row">
     <div class="thumbnail">
     @if(count($article->photo) > 0)
-    <a href="articles/{{$article->id}}">
-      <img  id = 'mainImage' class = 'img-responsive' src = '{{$article->photo[0]->path}}' alt ='{{$article->title}}' >
-    </a>
+      <a href="articles/{{$article->id}}">
+        <img  id = 'mainImage' class = 'img-responsive' src = '{{$article->photo[0]->path}}' alt ='{{$article->title}}' >
+      </a>
       @endif
       <div class="caption">
         <h3>{{$article->title}}</h3>
