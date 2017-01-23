@@ -28,12 +28,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-            $user = Auth::user();
-            $id = $user->id;
-            $articles = Article::where('user_id',$id)->get();
-            $count = $articles->count();
-           /*$userArticle = $user->articles()->first();*/
+         $user = Auth::user();
+         $id = $user->id;
+         $articles = Article::where('user_id',$id)->get();
+         $count = $articles->count();
           
-            return view('home', compact('articles', 'count'));
+         return view('home', compact('articles', 'count'));
     }
 }

@@ -17,14 +17,9 @@ class ArticlesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-
     {
-        //return $request->ip();
-        $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(9);
-        //$articles = Cache::remember('articles', 60, function()
-        //{
-        //    return Article::orderBy('views', 'desc')->get();
-        //});
+        $articles = Article::with('photo')->orderBy('views', 'desc')->paginate(12);
+       
         return view ('articles.index', compact('articles'));
     }
 
@@ -80,8 +75,10 @@ class ArticlesController extends Controller
 
         if(Auth::user())
         {
+            //If user logged in but does not own the article
             if($articles->user_id != Auth::user()->id)
             {
+                //increment views of particular article
                 $articles->views += 1;
                 $articles->save();
             }  
@@ -89,7 +86,7 @@ class ArticlesController extends Controller
 
         if(Auth::guest())
         {
-           
+            //if user is a guest increment views
             $articles->views += 1;
             $articles->save();
         }
@@ -108,11 +105,13 @@ class ArticlesController extends Controller
     {
         $articles = Article::findOrFail($id);
 
+        //If user owns the articles then it could be edited
         if($articles->user_id == Auth::user()->id)
         {
             return view ('articles.edit',compact('articles'));
         }
-        else{
+        else
+        {
             return redirect('/articles');
         }
 
@@ -163,15 +162,15 @@ class ArticlesController extends Controller
         
         $search = $request->q;
             
-         $articles = Article::with('photo')->where('location', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
+         $articles = Article::with('photo')->where('location', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(12);
 
            if(count($articles) == 0){
 
-              $articles = Article::with('photo')->where('title', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
+              $articles = Article::with('photo')->where('title', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(12);
                   
                   if(count($articles) == 0){
 
-                     $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(9);
+                     $articles = Article::with('photo')->where('body', 'LIKE', "%$search%")->orderBy('views', 'desc')->paginate(12);
                         
                         if(count($articles) == 0){
                             \Session::flash('flash_message','No results');

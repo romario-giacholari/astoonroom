@@ -18,5 +18,19 @@ class ExampleTest extends TestCase
              ->see('Browse');
     }
 
+    public function testLoginLink(){
+
+        $this->visit('/')
+             ->click('Login')
+             ->see('login');
+    }
+
+    public function testRegisterLink(){
+
+        $this->visit('/')
+             ->click('Register')
+             ->see('register');
+    }
+
   
 }

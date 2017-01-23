@@ -18,10 +18,11 @@ Route::get('/', function () {
     return view('welcome', compact('count'));
 
 });
-Auth::routes();
+
 
 Route::group(['middleware' => 'auth'], function () {
 
+Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::post('/article/store', 'ArticlesController@store');
 Route::delete('/articles/{id}/delete', 'ArticlesController@destroy');
@@ -34,6 +35,7 @@ Route::delete('/photos/{id}', 'PhotoController@destroy');
 
 
 });
+  
 Route::get('/articles/search/', 'ArticlesController@search');
 Route::get('/articles/', 'ArticlesController@index');
 Route::get('/articles/{id}', 'ArticlesController@show');

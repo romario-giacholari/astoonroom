@@ -167,7 +167,7 @@
     <div class="flex-center position-ref full-height" style = ' height:10%; width:100%; opacity:1'>
             <div class="content">
                 <div class="title m-b-md">
-                    <h3 style ='font-family:Arial, Helvetica, sans-serif; padding:10px;'>Available room(s): <a href ='/articles'>#{{$count}}</a></h3>
+                   <a href ='/articles'> <h2 style ='font-family:Arial, Helvetica, sans-serif; padding:10px;'>Total available room(s): {{$count}}</h2></a>
                 </div>
                 </div>
                 </div>

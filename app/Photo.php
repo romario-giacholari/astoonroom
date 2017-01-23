@@ -10,10 +10,8 @@ class Photo extends Model
 
 	protected $fillable = ['path'];
 
-    	public function article()
+    public function article()
 	{
-
 		return $this->belongsTo(Article::class);
-
 	}
 }
