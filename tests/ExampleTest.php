@@ -32,5 +32,5 @@ class ExampleTest extends TestCase
              ->see('register');
     }
 
-  
+
 }

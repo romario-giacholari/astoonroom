@@ -44,6 +44,9 @@
         #Posts:hover{
         color:blue;
         opacity:0.8;
+        border:ridge;
+        border-width: 1px;
+        border-color: blue;
     }
     #AD{
          border-style: ridge;
