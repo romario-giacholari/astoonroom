@@ -26,12 +26,14 @@
            @if(Auth::check())
            <div style = 'font-size:1em; font-family: Arial; '>Contact info:{{$articles->contact}}</div>
            @endif
+           @if($articles->postcode)
            <div id = 'postcode' style = 'font-size:1em; font-family: Arial; '>Postcode:{{$articles->postcode}}</div>
+           @endif
            <div style = 'font-size:1em; font-family: Arial; '>Created: {{$articles->created_at->diffForHumans()}}</div>
    </div>
 </div>
 
-<div class="col-xs-12 col-md-6" style = 'padding:15px'>
+<div class="col-xs-12 col-md-6 col-lg-12" style = 'padding:15px'>
          @foreach($articles->photo as $image)
            <img class = 'img-responsive ' src = '{{$image->path}}'>
         @endforeach
@@ -85,7 +87,7 @@
             }
       </script>  
 
-<div class="col-xs-12 col-md-6" style = 'padding:15px'>
+<div class="col-xs-12 col-md-6 col-lg-12" style = 'padding:15px'>
       <div id="map" style = 'height:400px; width:100%;display:block;'></div>
       <div style = 'display:none' id="text"></div>
 </div>
