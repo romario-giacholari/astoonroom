@@ -54,7 +54,7 @@
 @endif
  
 
-@if(count($articles)<1)
+@if(count($articles)<2)
   <form method = 'POST' action = 'article/store'>
   <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Property description.</h1>
 

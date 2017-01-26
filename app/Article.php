@@ -11,6 +11,7 @@ class Article extends Model
        'title',
        'body',
        'location',
+       'postcode',
        'contact',
        'gender',
        'year',

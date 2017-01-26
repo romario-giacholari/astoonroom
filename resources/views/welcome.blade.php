@@ -129,7 +129,7 @@
                             
                               <div class = "  col-xs-8 col-md-11 col-md-offset-0">
                                 <div class="form-group" >
-                                  <label for="sel1">Sort by location</label>
+                                  <label for="q">Sort by location</label>
                                   <select required class="form-control" id="q" name = 'q' autofocus>
                                     <option>Lakeside</option>
                                     <option>William Murdoch</option>

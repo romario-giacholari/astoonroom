@@ -134,7 +134,7 @@
                         @endif
                         <li style = 'padding:10px'>
                             <form action = '/articles/search' method = 'GET'>
-                                <input  class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
+                                <input type = 'text' class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
                             </form>
                         </li>
                     </ul>

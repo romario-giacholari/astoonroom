@@ -25,6 +25,11 @@
             <small  class="form-text text-muted">Provide the location of the accommodation</small>
           </div>
           <div class="form-group">
+            <label for="Postcode">Postcode</label>
+            <input  type="text" class="form-control" id="postcode" name = 'postcode'  placeholder="postcode">
+            <small  class="form-text text-muted">In order to display your property into the maps</small>
+          </div>
+          <div class="form-group">
             <label for="Gender">Gender</label>
             <select class="form-control" id="gender" name = 'gender'>
                 <option>Male</option>
