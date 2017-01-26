@@ -13,9 +13,7 @@ use App\Article;
 
 Route::get('/', function () {
 
-	$articles = Article::all();
-	$count = count($articles);;
-    return view('welcome', compact('count'));
+    return view('welcome');
 
 });
 

@@ -76,12 +76,12 @@ $(document).ready(function(){
         
 
 @foreach($articles as $article)
-  <div class="col-sm-6 col-md-3">
+  <div class="col-sm-6 col-md-4">
   <div class="row">
-    <div class="thumbnail" style = 'background-color:#FFF0FF'>
+    <div class="thumbnail" >
     @if(count($article->photo) > 0)
-      <a href="articles/{{$article->id}}">
-        <img  id = 'mainImage' class = 'img-responsive' src = '{{$article->photo[0]->path}}' alt ='{{$article->title}}' >
+     <a href="articles/{{$article->id}}"  >
+        <img  id="mainImage" class = 'img-responsive' src = '{{$article->photo[0]->path}}' alt ='{{$article->title}}' >
       </a>
       @endif
       <div class="caption">

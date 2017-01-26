@@ -38,6 +38,7 @@
 
 
     <style>
+
     body{
         background-color:white;
     }
@@ -73,7 +74,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top"  style = 'background-color:white'>
+        <nav class="navbar navbar-default "  style = 'background-color:white'>
             <div class="container">
                 <div class="navbar-header">
 

@@ -164,13 +164,6 @@
         </div>
       </div>
     @endif
-    <div class="flex-center position-ref full-height" style = ' height:10%; width:100%; opacity:1'>
-            <div class="content">
-                <div class="title m-b-md">
-                   <a href ='/articles'> <h2 style ='font-family:Arial, Helvetica, sans-serif; padding:10px;'>Total available room(s): {{$count}}</h2></a>
-                </div>
-                </div>
-                </div>
 
   <div class="flex-center position-ref full-height" style = 'padding:20px; height:15%; width:100%;'>
             <div class="content">
