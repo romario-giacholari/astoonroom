@@ -32,13 +32,13 @@
            <div style = 'font-size:1em; font-family: Arial; '>Created: {{$articles->created_at->diffForHumans()}}</div>
    </div>
 </div>
-
-<div class="col-xs-12 col-md-6 col-lg-12" style = 'padding:15px'>
-         @foreach($articles->photo as $image)
-           <img class = 'img-responsive ' src = '{{$image->path}}'>
-        @endforeach
-  </div>
-
+ @foreach($articles->photo as $image)
+ @if($image)
+<div class="col-xs-12 col-md-6 " style = 'padding:15px'>
+      <img class = 'img-responsive ' src = '{{$image->path}}'>
+</div>
+@endif
+ @endforeach
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUHOHlyg7U3qHZuor6SULmnrxEE0Vbo4"></script>
       <script type="text/javascript">
 
@@ -86,10 +86,11 @@
               });
             }
       </script>  
-
+@if($articles->postcode)
 <div class="col-xs-12 col-md-6 col-lg-12" style = 'padding:15px'>
       <div id="map" style = 'height:400px; width:100%;display:block;'></div>
       <div style = 'display:none' id="text"></div>
 </div>
+@endif
   </div>
 @endsection
