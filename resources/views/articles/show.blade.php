@@ -87,7 +87,7 @@
             }
       </script>  
 @if($articles->postcode)
-<div class="col-xs-12 col-md-6 col-lg-12" style = 'padding:15px'>
+<div class="col-xs-12 col-md-6" style = 'padding:15px'>
       <div id="map" style = 'height:400px; width:100%;display:block;'></div>
       <div style = 'display:none' id="text"></div>
 </div>
