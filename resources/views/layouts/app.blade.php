@@ -43,11 +43,9 @@
         background-color:white;
     }
         #Posts:hover{
-        color:blue;
         opacity:0.8;
-        border:ridge;
-        border-width: 1px;
-        border-color: blue;
+        color:blue;
+        background-color:#f2f2f2;     
     }
     #AD{
          border-style: ridge;
@@ -58,6 +56,7 @@
     #Posts{
          padding:15px;
          overflow:hidden;
+         background-color:white;
          
     }
   
