@@ -52,11 +52,6 @@ $(document).ready(function(){
 								<div class="form-group" >
 								  <label for="sel1">Sort by location</label>
 								  <select required class="form-control" id="q" name = 'q'>
-								    <option>Lakeside</option>
-								    <option>William Murdoch</option>
-								    <option>Harriet Martineau</option>
-								    <option>Mary Sturge</option>
-								    <option>James Watt</option>
 								    <option>Birmingham</option>
 								  </select>
 								 </div>

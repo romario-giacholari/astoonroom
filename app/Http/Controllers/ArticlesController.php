@@ -43,8 +43,8 @@ class ArticlesController extends Controller
     {
         $this->validate($request, [
         'title' => 'required|max:25',
-        'location'=>'required|in:Lakeside,William Murdoch,James Watt,Harriet Martineau,Mary Sturge',
-        'postcode'=> 'max:8',
+        'location'=>'required|max:25',
+        'postcode'=> 'required|max:8',
         'body' => 'required|max:555',
         'year' => 'required'
 
@@ -131,7 +131,7 @@ class ArticlesController extends Controller
     
         $this->validate($request, [
         'title' => 'required|max:25',
-        'location'=>'required|in:Lakeside,William Murdoch,James Watt,Harriet Martineau,Mary Sturge,Birmingham',
+        'location'=>'required|max:25',
         'body' => 'required|max:555',
         'year' => 'required'
 

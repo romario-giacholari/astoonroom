@@ -131,11 +131,6 @@
                                 <div class="form-group" >
                                   <label for="q">Sort by location</label>
                                   <select required class="form-control" id="q" name = 'q' autofocus>
-                                    <option>Lakeside</option>
-                                    <option>William Murdoch</option>
-                                    <option>Harriet Martineau</option>
-                                    <option>Mary Sturge</option>
-                                    <option>James Watt</option>
                                     <option>Birmingham</option>
                                   </select>
                                  </div>

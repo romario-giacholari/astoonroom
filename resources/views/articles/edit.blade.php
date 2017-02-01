@@ -51,11 +51,6 @@ $(document).ready(function(){
             <label for="Location">Property location</label>
             <select class="form-control" id="location"  name = 'location'>
                 <option>{{$articles->location}}</option>
-                <option>Lakeside</option>
-                <option>William Murdoch</option>
-                <option>James Watt</option>
-                <option>Harriet Martineau</option>
-                 <option>Mary Sturge</option>
                  <option>Birmingham</option>
               </select>
             <small  class="form-text text-muted">Provide the location of the accommodation</small>
