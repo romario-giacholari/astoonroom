@@ -22,15 +22,49 @@
            <div style = 'font-size:1em; font-family: Arial; '>Created: {{$articles->created_at->diffForHumans()}}</div>
    </div>
 </div>
+
  @foreach($articles->photo as $image)
  @if($image)
 <div class="col-xs-12 col-md-6 " style = 'padding:15px'>
-      <img class = 'img-responsive ' src = '{{$image->path}}'>
+      <img id="myImg" class = 'img-responsive ' src = '{{$image->path}}'>
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
 </div>
 @endif
  @endforeach
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUHOHlyg7U3qHZuor6SULmnrxEE0Vbo4"></script>
       <script type="text/javascript">
+      // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
 
           function getPosition(callback) {
             var geocoder = new google.maps.Geocoder();
