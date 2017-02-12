@@ -73,7 +73,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default "  style = 'background-color:white'>
+        <nav class="navbar navbar-inverse " style = 'background-color: black' >
             <div class="container">
                 <div class="navbar-header">
 

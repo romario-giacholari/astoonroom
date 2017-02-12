@@ -82,7 +82,7 @@
             }
 
             #img{
-                background-image: url('http://i1.birminghampost.co.uk/business/creative/article8920108.ece/ALTERNATES/s1227b/Verity-Milligan_01.jpg');
+                background-image: url('http://www.wallpaperhd.pk/wp-content/uploads/2015/01/room-doors-vector-art-wallpaper.jpg');
                 height:55%; 
                 background-position: center;
                 background-repeat: no-repeat;

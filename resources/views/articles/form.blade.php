@@ -1,6 +1,6 @@
 
        
-        
+        <div>
           {{csrf_field()}}
           <div class="form-group">
             <label for="Title">Ad title</label>

@@ -48,7 +48,7 @@ $(document).ready(function(){
 						
 				           <form method = 'GET' action = 'articles/search'>
 							
-							  <div class = " col-xs-8 col-md-6 col-md-offset-0">
+							  <div class = " col-xs-8 col-md-10 col-md-offset-0">
 								<div class="form-group" >
 								  <label for="sel1">Sort by location</label>
 								  <select required class="form-control" id="q" name = 'q'>
@@ -101,4 +101,5 @@ $(document).ready(function(){
 
 </div>
 <div class = 'text-center'>{{$articles->links()}}</div>
+</div>
 @endsection
