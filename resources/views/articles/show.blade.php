@@ -29,23 +29,23 @@
       <img id="myImg" class = 'img-responsive ' src = '{{$image->path}}'>
 </div>
 
-<div id="myModal" class="modal">
+<div id="ImagemyModal" class="Imagemodal">
 
   <!-- The Close Button -->
-  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+  <span class="close" onclick="document.getElementById('ImagemyModal').style.display='none'">&times;</span>
 
   <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
+  <img class="Imagemodal-content" id="img01">
 
   <!-- Modal Caption (Image Text) -->
   <div id="caption"></div>
 </div>
 @endif
  @endforeach
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUHOHlyg7U3qHZuor6SULmnrxEE0Vbo4"></script>
-      <script type="text/javascript">
+
+ <script type="text/javascript">
       // Get the modal
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('ImagemyModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('myImg');
@@ -64,7 +64,10 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
+</script>
 
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUHOHlyg7U3qHZuor6SULmnrxEE0Vbo4"></script>
+      <script type="text/javascript">
 
           function getPosition(callback) {
             var geocoder = new google.maps.Geocoder();
