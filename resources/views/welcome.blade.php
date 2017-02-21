@@ -64,7 +64,7 @@
             }
 
             .links > a {
-                color:white;
+                color:black;
                 padding: 0 25px;
                 font-size:11px;
                 font-weight: 600;
@@ -82,8 +82,8 @@
             }
 
             #img{
-                background-image: url('doors.jpg');
-                height:55%; 
+                background-color:white;
+                height:25%; 
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -96,7 +96,7 @@
         <div  id = 'img' class="flex-center position-ref full-height" >
             <div class="content">
                 <div class="title m-b-md">
-                    <h1 style ='color:white;font-family:Arial, Helvetica, sans-serif;'>AstonRoom</h1>
+                    <h1 style ='color:black;font-family:Arial, Helvetica, sans-serif;'>AstonRoom</h1>
                 </div>
 
                 <div class="links">

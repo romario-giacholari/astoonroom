@@ -51,7 +51,7 @@
 .Imagemodal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index:1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -103,7 +103,7 @@
 /* The Close Button */
 .close {
     position: absolute;
-    top: 15px;
+    top: 55px;
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;
@@ -113,7 +113,8 @@
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    color:white;
+    opacity:1;
     text-decoration: none;
     cursor: pointer;
 }
@@ -155,11 +156,14 @@
     #mainImage:hover{
         opacity:0.8;
     }
+    #content{
+        margin-top:70px;
+    }
     </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-inverse " style = 'background-color: black' >
+        <nav class="navbar navbar-default navbar-fixed-top " style = 'background-color:white' >
             <div class="container">
                 <div class="navbar-header">
 
@@ -220,7 +224,7 @@
                         @endif
                         <li style = 'padding:10px'>
                             <form action = '/articles/search' method = 'GET'>
-                                <input type = 'text' class="form-control" rows="4"  cols='3' id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
+                                <input type = "serach" class="form-control"  id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
                             </form>
                         </li>
                     </ul>
@@ -228,8 +232,13 @@
             </div>
         </nav>
 
-        @yield('content')
+     <div id  = 'content'>
        
+
+        @yield('content')
+      
+
+       </div>
         
     </div>
 

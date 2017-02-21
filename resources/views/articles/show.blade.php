@@ -64,6 +64,7 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
+
 </script>
 
  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUHOHlyg7U3qHZuor6SULmnrxEE0Vbo4"></script>
