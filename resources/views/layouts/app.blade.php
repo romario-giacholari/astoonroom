@@ -159,50 +159,113 @@
     #content{
         margin-top:70px;
     }
+             .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                bottom: 0;
+                left: 0;
+                background-color:black;
+                overflow-x: hidden;
+                transition: 0s;
+                padding-top:10px;
+                text-align:center;
+                opacity:1;
+
+
+
+
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 30px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+                margin-left:auto;
+                margin-right:90%;
+                position:relative;
+
+
+
+
+            }
+
+            .sidenav a:hover{
+                color:white;
+            }
+
+            .closebtn {
+                font-size: 36px !important;
+
+
+            }
+     #arrow{
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 10px 0 10px;
+                border-color: white transparent transparent transparent;
+                margin-top:7px;
+            }
+
     </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-fixed-top " style = 'background-color:white' >
-            <div class="container">
-                <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+            <div id="mySidenav" class="sidenav">
+                        <form  action = '/articles/search' method = 'GET'>
+                                <input style = 'color:white;background-color: black' type = "serach" class="form-control"  id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="20" required>
+                            </form>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005</a>
+                <a href="/home">Home</a>
+                <a href="/articles">Browse</a>
+@if(Auth::guest())
+               <a href="{{ url('/login') }}">Login</a>
+               <a href="{{ url('/register') }}">Register</a>
+                   @else
+                            
+                  
+                                        <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'AstonRoom') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                    @if(Auth::check())
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                          
+                        @endif
+                            
+                     
                     
-                    <li><a href="{{ url('/articles') }}">Browse</a></li>
-                    @else
-                     <li><a href="{{ url('/articles') }}">Browse</a></li>
-                    @endif
+            </div>
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-
-                        @else
-                            <li class="dropdown">
+<nav class="navbar navbar-inverse" style = 'background-color:black; '>
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <button  class = 'navbar-brand' style = 'background-color:black;  border:none; position:relative;' type="button"  onclick="openNav()"><span style="font-size:30px;cursor:pointer;" >
+        &#9776
+      </span></button>
+      <a class="navbar-brand" style = " color:white; font-size :2em;" href="/">astonroom</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a class = 'menuItem'  href="/home">Home</a></li>
+            <li><a class = 'menuItem'  href="/articles">Browse</a></li>
+          </ul>
+        <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+              @if(Auth::guest())
+               <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                @else
+                <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -214,23 +277,18 @@
                                             Logout
                                         </a>
 
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
                                     </li>
 
                                 </ul>
                             </li>
-                        @endif
-                        <li style = 'padding:10px'>
-                            <form action = '/articles/search' method = 'GET'>
-                                <input type = "serach" class="form-control"  id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="40" required>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                        
+                    @endif
+
+              </ul>
+         </div>
+   </div>
+ </div>
+</nav>
 
      <div id  = 'content'>
        
@@ -244,6 +302,26 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script>
+$("#content").hover(function() {
+
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("app").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+
+});
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+    document.getElementById("app").style.marginLeft = "0px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("app").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
     
 </body>
 </html>
