@@ -35,17 +35,7 @@
       </table>
       
   </div>
-  <div class = 'container'>
-  <div class = 'row'>
-  <div class = 'col-md-4'>
-  @foreach($articles as $article)
-  @foreach($article->photo as $thumbnail)
-  <img src="{{$thumbnail->path}}" class="img-thumbnail" >
- @endforeach
- @endforeach
- </div>
- </div>
- </div>
+
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg ">
     <div class="modal-content">
@@ -60,16 +50,14 @@
 </div>
 @endif
  
-
-@if(count($articles)<1)
+<div class = 'container'>
   <form method = 'POST' action = 'article/store'>
   <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Property description.</h1>
 
   @include ('articles.form', ['submitButton'=>'Post'])
         
    </form>
-@endif
-
+</div>
 </div>
 </div>
 </div>

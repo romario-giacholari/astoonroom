@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 <div class = 'container'>
 <div class = "row"  >
-  <div class = "col-md-7 col-md-offset-0">
+  <div class = "col-md-8 col-md-offset-0">
 
     <form action="update" method="POST">
     <h1 style ='font-family:Arial, Helvetica, sans-serif;'>Update your ad</h1>
@@ -91,10 +91,8 @@ $(document).ready(function(){
   </div>
   
 
-  <div class = "col-md-5 col-md-offset-0 ">
-  <div class ='row'>
+  <div class = "col-md-4 col-md-offset-0 ">
    @foreach($articles->photo as $image)
-           <div class = "col-md-12 col-md-offset-0 ">
            <img class ='img-thumbnail' src = '{{$image->path}}' style = 'margin-top:80px'>
            @if(Auth::user())
            <form action = '/photos/{{$image->id}}' method = 'POST'>
@@ -103,7 +101,6 @@ $(document).ready(function(){
            <button class = 'btn btn-danger' style = 'margin-top:20px;margin-bottom:20px; width:100%'>delete</button>
            </form>
            @endif
-           </div>
         @endforeach
 
 @if(Auth::user())
@@ -145,7 +142,6 @@ Dropzone.options.addPhotosForm = {
         
   </div>
 
-</div>
 
 
 

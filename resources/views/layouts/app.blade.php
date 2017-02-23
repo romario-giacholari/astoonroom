@@ -156,9 +156,7 @@
     #mainImage:hover{
         opacity:0.8;
     }
-    #content{
-        margin-top:70px;
-    }
+
              .sidenav {
                 height: 100%;
                 width: 0;
@@ -169,7 +167,6 @@
                 background-color:black;
                 overflow-x: hidden;
                 transition: 0s;
-                padding-top:10px;
                 text-align:center;
                 opacity:1;
 
@@ -181,7 +178,8 @@
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size: 30px;
+                font-size:55px;
+                font-family: Lato;
                 color: #818181;
                 display: block;
                 transition: 0.3s;
@@ -218,9 +216,10 @@
     <div id="app">
 
             <div id="mySidenav" class="sidenav">
-                        <form  action = '/articles/search' method = 'GET'>
-                                <input style = 'color:white;background-color: black' type = "serach" class="form-control"  id="search" name = 'q' placeholder= 'search property location, e.g. James Watt' size="20" required>
-                            </form>
+                    
+             
+
+                <div class = 'container'>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005</a>
                 <a href="/home">Home</a>
                 <a href="/articles">Browse</a>
@@ -242,8 +241,13 @@
                           
                         @endif
                             
-                     
+                 <form action = '/articles/search' method = 'GET' class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input size = '30' style = 'color:white;background:black;' id="search" name = 'q' type="text" class="form-control" placeholder="Search">
+                  </div>
+                </form>
                     
+            </div>
             </div>
 
 <nav class="navbar navbar-inverse" style = 'background-color:black; '>
@@ -307,19 +311,17 @@ $("#content").hover(function() {
 
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("app").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
 
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "350px";
+    document.getElementById("mySidenav").style.width = "330px";
     document.getElementById("app").style.marginLeft = "0px";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("app").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
 }
 </script>
     

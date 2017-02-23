@@ -71,6 +71,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                
             }
 
             .links :hover{
@@ -104,8 +105,8 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                <a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                <a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
 
          <a href="{{ url('/articles') }}">Browse</a> 
        
