@@ -178,13 +178,13 @@
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size:45px;
+                font-size:25px;
                 font-family: Lato;
                 color: #818181;
                 display: block;
                 transition: 0.3s;
                 margin-left:auto;
-                margin-right:90%;
+                margin-right:100%;
                 position:relative;
 
 
@@ -221,11 +221,11 @@
 
                 <div class = 'container'>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
-                <a href="/home">Home</a>
-                <a href="/articles">Browse</a>
+                <a href="/home"><span class="glyphicon glyphicon-home"></span></a>
+                <a href="/articles"><span class ='glyphicon glyphicon-flash'></span></a>
 @if(Auth::guest())
-               <a href="{{ url('/login') }}">Login</a>
-               <a href="{{ url('/register') }}">Register</a>
+               <a href="{{ url('/login') }}"><span class="glyphicon glyphicon-log-in"></span></a>
+               <a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span></a>
                    @else
                             
                   
@@ -240,20 +240,20 @@
                                         </form>
                           
                         @endif
-                            
+                     <!--       
                  <form action = '/articles/search' method = 'GET' class="navbar-form navbar-left" role="search">
                   <div class="form-group">
                     <input size = '30' style = 'color:white;background:black;' id="search" name = 'q' type="text" class="form-control" placeholder="Search">
                   </div>
                 </form>
-                    
+                    -->
             </div>
             </div>
 
 <nav class="navbar navbar-inverse" style = 'background-color:black; '>
   <div class="container-fluid">
     <div class="navbar-header">
-       <button  class = 'navbar-brand' style = 'background-color:black;  border:none; position:relative;' type="button"  onmouseover="openNav()"><span style="font-size:30px;cursor:pointer;" >
+       <button  class = 'navbar-brand' style = 'background-color:black;  border:none; position:relative;' type="button"  onclick="openNav()"><span style="font-size:30px;cursor:pointer;" >
         &#9776
       </span></button>
       <a class="navbar-brand" style = " color:white; font-size :2em;" href="/">astonroom</a>
@@ -315,8 +315,8 @@ $("#content").click(function() {
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "315px";
-    document.getElementById("app").style.marginLeft = "0px";
+    document.getElementById("mySidenav").style.width = "80px";
+    document.getElementById("app").style.marginLeft = "80px";
 }
 
 function closeNav() {
