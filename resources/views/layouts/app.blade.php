@@ -232,7 +232,7 @@
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            <span class = 'glyphicon glyphicon-off'></span>
                                         </a>
 
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -315,8 +315,8 @@ $("#content").click(function() {
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "80px";
-    document.getElementById("app").style.marginLeft = "80px";
+    document.getElementById("mySidenav").style.width = "50px";
+    document.getElementById("app").style.marginLeft = "50px";
 }
 
 function closeNav() {
