@@ -315,8 +315,8 @@ $("#content").click(function() {
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "50px";
-    document.getElementById("app").style.marginLeft = "50px";
+    document.getElementById("mySidenav").style.width = "70px";
+    document.getElementById("app").style.marginLeft = "70px";
 }
 
 function closeNav() {
