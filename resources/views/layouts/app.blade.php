@@ -178,7 +178,7 @@
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size:55px;
+                font-size:45px;
                 font-family: Lato;
                 color: #818181;
                 display: block;
@@ -220,7 +220,8 @@
              
 
                 <div class = 'container'>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
+                <hr>
                 <a href="/home">Home</a>
                 <a href="/articles">Browse</a>
 @if(Auth::guest())
@@ -253,7 +254,7 @@
 <nav class="navbar navbar-inverse" style = 'background-color:black; '>
   <div class="container-fluid">
     <div class="navbar-header">
-       <button  class = 'navbar-brand' style = 'background-color:black;  border:none; position:relative;' type="button"  onclick="openNav()"><span style="font-size:30px;cursor:pointer;" >
+       <button  class = 'navbar-brand' style = 'background-color:black;  border:none; position:relative;' type="button"  onmouseover="openNav()"><span style="font-size:30px;cursor:pointer;" >
         &#9776
       </span></button>
       <a class="navbar-brand" style = " color:white; font-size :2em;" href="/">astonroom</a>
@@ -266,7 +267,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-right">
               @if(Auth::guest())
-               <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+               <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 @else
                 <li class="dropdown">
@@ -307,7 +308,7 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script>
-$("#content").hover(function() {
+$("#content").click(function() {
 
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("app").style.marginLeft= "0";
@@ -315,7 +316,7 @@ $("#content").hover(function() {
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "330px";
+    document.getElementById("mySidenav").style.width = "340px";
     document.getElementById("app").style.marginLeft = "0px";
 }
 
