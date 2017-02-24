@@ -221,7 +221,6 @@
 
                 <div class = 'container'>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
-                <hr>
                 <a href="/home">Home</a>
                 <a href="/articles">Browse</a>
 @if(Auth::guest())
@@ -316,7 +315,7 @@ $("#content").click(function() {
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "340px";
+    document.getElementById("mySidenav").style.width = "315px";
     document.getElementById("app").style.marginLeft = "0px";
 }
 
