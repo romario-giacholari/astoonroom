@@ -162,13 +162,14 @@
                 width: 0;
                 position: fixed;
                 z-index: 1;
-                bottom: 0;
+                top :0;
                 left: 0;
                 background-color:black;
                 overflow-x: hidden;
-                transition: 0s;
+                transition:0s;
                 text-align:center;
                 opacity:1;
+                
 
 
 
@@ -178,13 +179,13 @@
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size:25px;
+                font-size:24px;
                 font-family: Lato;
                 color: #818181;
                 display: block;
                 transition: 0.3s;
                 margin-left:auto;
-                margin-right:100%;
+                margin-right:90%;
                 position:relative;
 
 
@@ -253,8 +254,8 @@
 <nav class="navbar navbar-inverse" style = 'background-color:black; '>
   <div class="container-fluid">
     <div class="navbar-header">
-       <button  class = 'navbar-brand' style = 'background-color:black;  border:none; position:relative;' type="button"  onclick="openNav()"><span style="font-size:30px;cursor:pointer;" >
-        &#9776
+       <button  class = 'navbar-brand' style = 'background-color:black;  border:none; position:relative;' type="button"  onclick="openNav()"><span class ='glyphicon glyphicon-align-justify' >
+        
       </span></button>
       <a class="navbar-brand" style = " color:white; font-size :2em;" href="/">astonroom</a>
     </div>
@@ -316,7 +317,7 @@ $("#content").click(function() {
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "80px";
-    document.getElementById("app").style.marginLeft = "80px";
+    document.getElementById("app").style.marginLeft = "0x";
 }
 
 function closeNav() {
