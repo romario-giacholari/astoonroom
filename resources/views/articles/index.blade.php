@@ -71,7 +71,7 @@ $(document).ready(function(){
         
 
 @foreach($articles as $article)
-  <div class="col-sm-6 col-md-3 col-md-offset-0">
+  <div class="col-sm-6 col-md-6 col-md-offset-0">
   <div class="row">
     <div  class="thumbnail " >
     @if(count($article->photo) > 0)
