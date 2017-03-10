@@ -25,18 +25,6 @@
         ]); ?>
     </script>
 
-    <script>
- $(document).ready(function(){
-            $('#search').click(function(){
-                $('#whole').css({ "opacity":"0.1"});
-            });
-             $('#whole').hover(function(){
-                $('body').css({ "opacity":"1"});
-            });
-        });
-        </script>
-
-
     <style>
     /* Style the Image Used to Trigger the Modal */
 #myImg {
@@ -157,6 +145,7 @@
         opacity:0.8;
     }
 
+  
              .sidenav {
                 height: 100%;
                 width: 0;
@@ -325,6 +314,18 @@ function closeNav() {
     document.getElementById("app").style.marginLeft= "0";
 }
 </script>
+<!--
+<script>
+ $(document).ready(function(){
+            $('#search').click(function(){
+                $('#whole').css({ "opacity":"0.1"});
+            });
+             $('#whole').hover(function(){
+                $('body').css({ "opacity":"1"});
+            });
+        });
+        </script>
+-->
     
 </body>
 </html>
