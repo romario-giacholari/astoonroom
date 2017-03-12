@@ -231,7 +231,7 @@
 @endif
 
 
-  <footer class="text-center jumbotron">
+  <footer class="text-center jumbotron" style = 'background-color: white'>
        <p style = 'font-size:1em'>Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
    </footer>            
               
