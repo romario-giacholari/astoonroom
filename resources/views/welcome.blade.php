@@ -21,7 +21,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image:url('http://bossfight.co/wp-content/uploads/2015/12/bossfight-free-stock-images-high-resolution-photos-photography-creative-commons-zero-city-sky-town.jpg');
+                background-color:white;
                 color: black;
                 font-family: 'Arial', sans-serif;
                 font-weight: 100;
@@ -91,12 +91,8 @@
 
             #img{
                 
-                height:25%; 
+                height:35%; 
                 
-            }
-            .container-fluid {
-            padding-top:200px;
-            padding-bottom: 70px;
             }
 
         </style>
@@ -172,8 +168,8 @@
     @endif
 -->
 @if(Auth::guest())
-<div class="container">
-    <div class="row">
+<div class="container" >
+    <div class="row"> 
         <div class="col-md-8 col-md-offset-2">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
@@ -235,8 +231,8 @@
 @endif
 
 
-  <footer class="container-fluid bg-4 text-center">
-       <p>Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
+  <footer class="text-center jumbotron">
+       <p style = 'font-size:1em'>Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
    </footer>            
               
     </body>
