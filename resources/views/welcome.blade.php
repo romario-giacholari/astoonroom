@@ -27,9 +27,7 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+               
 
             }
 
@@ -91,7 +89,11 @@
 
             #img{
                 
-                height:35%; 
+                height:25%;
+                  background-image:url('http://wallpaper.pickywallpapers.com/1920x1080/earth-stratosphere.jpg');
+                   background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
                 
             }
 
@@ -110,8 +112,8 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                <a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-                <a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                <a href="register"> Sign Up</a>
+                <a href="/login">Login</a>
 
          <a href="{{ url('/articles') }}">Browse</a> 
        
@@ -178,7 +180,7 @@
                             <label for="email" class="col-md-4 control-label">Email</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="Email">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -192,7 +194,7 @@
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" type="password" class="form-control" name="password" required placeholder="Password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -214,7 +216,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     Login
                                 </button>
 
