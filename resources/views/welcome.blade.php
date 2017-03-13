@@ -89,7 +89,10 @@
 
             #img{
                 
-                height:25%;
+                  height:30%;
+                  @if(Auth::check())
+                  height:100%;
+                  @endif
                   background-image:url('http://wallpaper.pickywallpapers.com/1920x1080/earth-stratosphere.jpg');
                    background-position: center;
                   background-repeat: no-repeat;
