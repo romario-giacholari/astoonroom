@@ -116,9 +116,7 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                 <a href="register"> Sign Up</a>
-                <a href="/login">Login</a>
-
-         <a href="{{ url('/articles') }}">Browse</a> 
+                <a href="{{ url('/articles') }}">Browse</a> 
        
                     @endif
                 
