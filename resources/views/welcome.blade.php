@@ -89,7 +89,7 @@
 
             #img{
                 
-                  height:30%;
+                  height:35%;
                   @if(Auth::check())
                   height:100%;
                   @endif

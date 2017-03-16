@@ -2,7 +2,6 @@
 @section('content')
 <div class = 'container'>
 <div class = 'row'>
-<div class = "col-md-12 col-md-offset-0" >
 @if(Session::has('flash_message'))
 <div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'margin-top:0px;'>{{Session::get('flash_message')}}
 </div>
@@ -41,9 +40,9 @@ $(document).ready(function(){
     @endif
   @endforeach	
 @endforeach
-    <div>
+
         <div class = " col-md-12 col-md-offset-0 ">
-				<div class = 'row'>
+			
 						<div class="form-group ">
 						
 				           <form method = 'GET' action = 'articles/search'>
@@ -66,12 +65,12 @@ $(document).ready(function(){
 								
 							</form>
 						</div>
-        		 </div>
+     
         </div>
         
 
 @foreach($articles as $article)
-  <div class="col-sm-6 col-md-4 col-md-offset-0">
+  <div class=" col-xs-12 col-sm-4 col-md-3  col-xl-6 col-md-offset-0">
   <div class="row">
     <div  class="thumbnail " >
     @if(count($article->photo) > 0)
@@ -97,9 +96,6 @@ $(document).ready(function(){
 
 </div>
 
-</div>
-
-</div>
 <div class = 'text-center'>{{$articles->links()}}</div>
 </div>
 @endsection

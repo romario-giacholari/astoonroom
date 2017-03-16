@@ -306,7 +306,7 @@ $("#content").click(function() {
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "80px";
-    document.getElementById("app").style.marginLeft = "0x";
+    document.getElementById("app").style.marginLeft = "80px";
 }
 
 function closeNav() {
