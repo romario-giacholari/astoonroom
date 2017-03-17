@@ -3,33 +3,46 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\Article;
+use App\User;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic functional test example.
-     *
-     * @return void
-     */
-    public function testBasicExample()
-    {
-        $this->visit('/')
-             ->click('Browse')
-             ->see('Browse');
+   /** @test */
+     public function see_all_posts(){
+
+        $posts = Article::all();
+        $this->visit('/articles')
+             ->see('Aston Triangle');
     }
 
-    public function testLoginLink(){
+     /** @test */
+      public function see_specific_post(){
 
-        $this->visit('/')
-             ->click('Login')
-             ->see('login');
+        $post = Article::first();
+        $this->visit('articles/'.$post->id)
+             ->see($post->body);
     }
 
-    public function testRegisterLink(){
+    //Given there is a user
 
-        $this->visit('/')
-             ->click('Register')
-             ->see('register');
+    //when  logged in
+
+    //and deletes the ad
+
+    //then the ad should not exist any more
+
+     /** @test */
+      public function login_user(){
+
+        $user = User::first();
+        $this->visit('/login')
+             ->see('login')
+             ->type($user->email,'email')
+             ->type('secret','password')
+             ->press('login')
+             ->see('/home')
+             ->click('delete');
     }
 
 

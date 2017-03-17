@@ -27,7 +27,7 @@
                 </a>
            </td>
             <td style = 'height:100%;'>
-                  <button class = 'btn btn-danger btn-sm pull-left ' data-toggle="modal" data-target=".bd-example-modal-lg"><span class = 'glyphicon glyphicon-trash'></span></button>
+                  <a href ='#' name = 'delete'><button  class = 'btn btn-danger btn-sm pull-left ' data-toggle="modal" data-target=".bd-example-modal-lg"><span class = 'glyphicon glyphicon-trash'></span></button></a>
            </td>
          </tr>
         </tbody>
@@ -42,7 +42,7 @@
       <form action="articles/{{$article->id}}/delete" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('DELETE') }}
-                <button style = 'width:100%;height:100%' class = 'btn btn-danger btn-lg pull-left '>Delete</button>
+                <input type ='submit' value ='Delete' name = 'Delete' style = 'width:100%;height:100%' class = 'btn btn-danger btn-lg pull-left '>
       </form>
       <button style = 'margin-top:10px;width:100%;height:100%' class = 'btn btn-default btn-lg pull-left ' data-dismiss="modal">Cancel</button>
     </div>
