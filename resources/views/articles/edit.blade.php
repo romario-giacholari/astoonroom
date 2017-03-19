@@ -28,8 +28,7 @@ $(document).ready(function(){
 </div>
 
 
-<div class = 'container'>
-<div class = "row"  >
+
   <div class = "col-md-8 col-md-offset-0">
 
     <form action="update" method="POST">
@@ -98,16 +97,16 @@ $(document).ready(function(){
            <form action = '/photos/{{$image->id}}' method = 'POST'>
              {{ method_field('DELETE') }}
              {{csrf_field()}}
-           <button class = 'btn btn-danger' style = 'margin-top:20px;margin-bottom:20px; width:100%'>delete</button>
+           <button class = 'btn btn-danger' style = 'margin-top:5px;margin-bottom:20px; width:100%'>delete</button>
            </form>
            @endif
         @endforeach
-
+</div>
 @if(Auth::user())
 @if(Auth::user()->id == $articles->user_id)
 @if(count($articles->photo) == 0)
 
-  <div class = "col-md-12 col-md-offset-0  jumbotron" style = 'margin-top:80px'>
+  <div class = "col-md-4 col-md-offset-0  jumbotron" style = 'margin-top:80px'>
     <h2 style ='font-family:Arial, Helvetica, sans-serif;'>Upload image and click ok</h2>
   <form id = 'addPhotosForm' class ='dropzone' action = '/articles/{{$articles->id}}/photos' method = 'POST' style = 'margin-top:20px'>
 
@@ -117,6 +116,7 @@ $(document).ready(function(){
 
   <a href = '/articles'><button class = 'btn btn-primary' style = 'margin-top:20px;margin-bottom:20px; width:100%'>Ok</button></a>
   </div>
+
   @endif
 @endif
 @endif
@@ -140,13 +140,8 @@ Dropzone.options.addPhotosForm = {
 
   </script>
         
-  </div>
 
 
-
-
-</div>
-</div>
 
 
 @endsection

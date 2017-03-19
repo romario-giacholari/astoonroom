@@ -23,6 +23,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 Route::get('/home', 'HomeController@index');
+Route::get('/create', 'ArticlesController@create');
 Route::post('/article/store', 'ArticlesController@store');
 Route::delete('/articles/{id}/delete', 'ArticlesController@destroy');
 Route::get('/articles/{id}/edit', 'ArticlesController@edit');

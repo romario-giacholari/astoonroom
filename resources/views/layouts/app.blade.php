@@ -213,10 +213,12 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
                 <a href="/home"><span class="glyphicon glyphicon-home"></span></a>
                 <a href="/articles"><span class ='glyphicon glyphicon-flash'></span></a>
-@if(Auth::guest())
+                <a href="/create"><span class =' glyphicon glyphicon-plus'></span></a>
+               
+            @if(Auth::guest())
                <a href="{{ url('/login') }}"><span class="glyphicon glyphicon-log-in"></span></a>
                <a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span></a>
-                   @else
+             @else
                             
                   
                                         <a href="{{ url('/logout') }}"
@@ -251,6 +253,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a class = 'menuItem'  href="/home">Home</a></li>
+            <li><a class = 'menuItem'  href="/create">Post</a></li>
             <li><a class = 'menuItem'  href="/articles">Browse</a></li>
           </ul>
         <div class="collapse navbar-collapse" id="myNavbar">

@@ -65,12 +65,10 @@
             }
 
             .links > a {
-                color:black;
                 padding: 0 25px;
                 font-size:11px;
                 font-weight: 600;
                 letter-spacing: .1rem;
-                text-decoration: none;
                 text-transform: uppercase;
                 
             }
@@ -79,9 +77,6 @@
                 
             }
 
-            .links :hover{
-               color:black;
-            }
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -90,10 +85,7 @@
             #img{
                 
                   height:35%;
-                  @if(Auth::check())
-                  height:100%;
-                  @endif
-                  background-image:url('http://wallpaper.pickywallpapers.com/1920x1080/earth-stratosphere.jpg');
+                  background-color:white;
                    background-position: center;
                   background-repeat: no-repeat;
                   background-size: cover;
@@ -117,7 +109,7 @@
                     @else
                 <a href="register"> Sign Up</a>
                 <a href="{{ url('/articles') }}">Browse</a> 
-       
+                <a href="/create">Post</a>
                     @endif
                 
             @endif
