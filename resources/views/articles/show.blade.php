@@ -40,10 +40,7 @@
   <!-- Modal Caption (Image Text) -->
   <div id="caption"></div>
 </div>
-@endif
- @endforeach
-
- <script type="text/javascript">
+<script type="text/javascript">
       // Get the modal
 var modal = document.getElementById('ImagemyModal');
 
@@ -67,6 +64,11 @@ span.onclick = function() {
 
 </script>
 
+@endif
+ @endforeach
+
+ 
+@if($articles->postcode != null)
  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUHOHlyg7U3qHZuor6SULmnrxEE0Vbo4"></script>
       <script type="text/javascript">
 
@@ -114,7 +116,7 @@ span.onclick = function() {
               });
             }
       </script>  
-@if($articles->postcode)
+
 <div class="col-xs-12 col-md-6" style = 'padding:15px'>
       <div id="map" style = 'height:400px; width:100%;display:block;'></div>
       <div style = 'display:none' id="text"></div>

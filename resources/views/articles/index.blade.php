@@ -2,6 +2,7 @@
 @section('content')
 <div class = 'container'>
 <div class = 'row'>
+<div class = "col-md-12 col-md-offset-0" >
 @if(Session::has('flash_message'))
 <div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'margin-top:0px;'>{{Session::get('flash_message')}}
 </div>
@@ -14,32 +15,7 @@ $(document).ready(function(){
 </script>
 @endif	 
 
-<script>
 
- $(document).ready(function(){
-            $('#search').click(function(){
-
-                $('#whole').css({ "opacity":"0.5"});
-
-            });
-
-             $('#whole').hover(function(){
-
-                $('#whole').css({ "opacity":"1"});
-
-            });
-
-        });
-        </script>
-@foreach($articles as $article)
-  @foreach($article->photo as $thumbnail)
-    @if(count($thumbnail)>0)
-          <div   id = 'whole'>
-          @else
-          <div id = 'whole' style = 'height:200px;'>
-    @endif
-  @endforeach	
-@endforeach
 
         <div class = " col-md-12 col-md-offset-0 ">
 			
@@ -70,7 +46,7 @@ $(document).ready(function(){
         
 
 @foreach($articles as $article)
-  <div class=" col-xs-12 col-sm-4 col-md-3  col-xl-6 col-md-offset-0">
+  <div class=" col-sm-12 col-md-4 col-xlg-6 col-md-offset-0">
   <div class="row">
     <div  class="thumbnail " >
     @if(count($article->photo) > 0)
@@ -91,11 +67,8 @@ $(document).ready(function(){
 	
 @endforeach
 	</div>
-		
-</div>
-
+ </div>
 </div>
 
 <div class = 'text-center'>{{$articles->links()}}</div>
-</div>
 @endsection

@@ -20,23 +20,6 @@ $(document).ready(function(){
   });
 </script>
 @endif	
-<script>
-
- $(document).ready(function(){
-            $('#search').click(function(){
-
-                $('#whole').css({ "opacity":"0.5"});
-
-            });
-
-             $('#whole').hover(function(){
-
-                $('#whole').css({ "opacity":"1"});
-
-            });
-
-        });
-        </script>
 
 <!--<div class="form-group">
 	  <form action = '/articles/search' method = 'GET'>
@@ -44,74 +27,29 @@ $(document).ready(function(){
 	 </form>
 </div>
 -->
-     <div  id = 'whole'>
      
 
 @foreach($articles as $article)
-<a href = '{{$article->id}}'>
-<div class = "col-md-12 col-md-offset-0 jumbotron" id ="Posts"  >
-	
-		 <div class="col-md-8 col-md-offset-0 form-group">
-
-		 <!--
-		 <div>Views: {{$article->views}}</div>
-		 <div>Year: {{$article->year}}</div>
-		  <div >Contact info: 
-		     @if($article->contact)
-		     Provided
-		     @else
-		     None given
-		     @endif
-		     </div>
-		     <div>Location: {{$article->location}}</div>
-		     <div>Gender: {{$article->gender}}</div>
-		     <div> {{$article->created_at->diffForHumans()}}</div>
-		    <label style = 'width:100%;font-family:Arial, Helvetica, sans-serif;'><h2>{{$article->title}}</h2></label>
-		    -->
-
-		 
-
-		 <div class="table-responsive">          
-		  <table class="table">
-			    <thead>
-			      <tr>
-			        <th>Views</th>
-			        <th>Year</th>
-			        <th>Contact info</th>
-			        <th>Location</th>
-			        <th>Gender</th>
-			        <th>Created</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-			      <tr>
-			        <td>{{$article->views}}</td>
-			        <td>{{$article->year}}</td>
-			        <td>{{$article->contact}}</td>
-			        <td>{{$article->location}}</td>
-			        <td>{{$article->gender}}</td>
-			        <td>{{$article->created_at->diffForHumans()}}</td>
-			      </tr>
-			    </tbody>
-  			</table>
-
-  		    </div>
-
-		 </div>
-	
-		
-@if(count($article->photo) > 0)
-	     <div class = "col-md-2 col-md-offset-0">
-				<img class = 'img-responsive' src = '{{$article->photo[0]->path}}' height = "250px" width="230px" >
-		 </div>
-		 @endif
+  <div class="  col-md-12 col-md-offset-0">
+  <div class="row">
+    <div  class="thumbnail " >
+    @if(count($article->photo) > 0)
+     <a href="articles/{{$article->id}}"  >
+        <img  id="mainImage" class = 'img-responsive' src = '{{$article->photo[0]->path}}' alt ='{{$article->title}}' >
+      </a>
+      @endif
+      <div class="caption">
+        <h3>{{$article->title}}</h3>
+        <p>{{$article->body}}</p>
+        <p>Location:{{$article->location}}</p>
+        <p><span class = 'glyphicon glyphicon-eye-open' ></span> {{$article->views}}</p>
+        <p><a href="articles/{{$article->id}}" class="btn btn-primary" role="button">View</a> </p>
+      </div>
+    </div>
+  </div>
 </div>
-
-</a>
- 
-  
+	
 @endforeach
-</div>
 </div>
 </div>
 </div>
