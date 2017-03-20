@@ -23,7 +23,7 @@
             html, body {
                 background-color:white;
                 color: black;
-                font-family: 'Arial', sans-serif;
+                font-family: 'Lato', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -92,6 +92,10 @@
                 
             }
 
+            .ad-image:hover{
+                opacity:0.7;
+            }
+
         </style>
     </head>
     <body  >
@@ -99,7 +103,7 @@
         <div  id = 'img' class="flex-center position-ref full-height" >
             <div class="content">
                 <div class="title m-b-md">
-                    <h1 style ='color:black;font-family:Arial, Helvetica, sans-serif;'>astonroom</h1>
+                    <h1 style ='color:black;font-family:Lato;'><span style ='color:blue;'>@</span>astonroom</h1>
                 </div>
 
                 <div class="links">
@@ -119,20 +123,19 @@
 
         </div>  
         <hr>
-        <!--
           <div class = " col-md-12 col-md-offset-0 " >
           <div class = 'container'>
                 <div class = 'row'>
 
                         <div class="form-group ">
-                          <p style = 'margin-left:15px'>Looking for a room within Birmingham?</p>
+                          <p style = 'margin-left:15px'>Search for rooms.</p>
 
                            <form method = 'GET' action = 'articles/search'>
                             
                               <div class = "  col-xs-8 col-md-11 col-md-offset-0">
                                 <div class="form-group" >
                                   <label for="q">Sort by location</label>
-                                  <select required class="form-control" id="q" name = 'q' autofocus>
+                                  <select required class="form-control" id="q" name = 'q' >
                                     <option>Birmingham</option>
                                   </select>
                                  </div>
@@ -151,6 +154,8 @@
         </div>
       </div>
 
+
+
       @if(Session::has('flash_message'))
       <div class =' container'>
        <div class = 'row'>
@@ -161,11 +166,25 @@
         </div>
       </div>
     @endif
--->
+
 @if(Auth::guest())
 <div class="container" >
     <div class="row"> 
-        <div class="col-md-8 col-md-offset-2">
+
+
+
+
+<a href = '/register'>
+<div class="col-md-4 col-md-offset-0">
+   <div class="panel panel-default">
+     <img src = 'http://www.qubsu.org/Advertisewithus/CentredImage,426468,en.jpg' class ='img-thumbnail ad-image'>
+  </div>
+</div>
+</a>
+
+
+
+        <div class="col-md-8 col-md-offset-0">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
@@ -173,7 +192,7 @@
                             <label for="email" class="col-md-4 control-label">Email</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="Email">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required  placeholder="Email">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -220,11 +239,13 @@
                         </div>
                     </form>
         </div>
-    </div>
-</div>
+
 
 @endif
 
+
+</div>
+</div>
 
   <footer class="text-center jumbotron" style = 'background-color: white'>
        <p style = 'font-size:1em'>Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>

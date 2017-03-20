@@ -172,7 +172,7 @@
                 font-family: Lato;
                 color: #818181;
                 display: block;
-                transition: 0.3s;
+                transition: 0.5s;
                 margin-left:auto;
                 margin-right:100%;
                 position:relative;
