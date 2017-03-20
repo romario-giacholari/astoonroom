@@ -34,7 +34,7 @@ $(document).ready(function(){
   <div class="row">
     <div  class="thumbnail " >
     @if(count($article->photo) > 0)
-     <a href="articles/{{$article->id}}"  >
+     <a href="{{ route('article',$article->id) }}"  >
         <img  id="mainImage" class = 'img-responsive' src = '{{$article->photo[0]->path}}' alt ='{{$article->title}}' >
       </a>
       @endif
@@ -43,7 +43,7 @@ $(document).ready(function(){
         <p>{{$article->body}}</p>
         <p>Location:{{$article->location}}</p>
         <p><span class = 'glyphicon glyphicon-eye-open' ></span> {{$article->views}}</p>
-        <p><a href="articles/{{$article->id}}" class="btn btn-primary" role="button">View</a> </p>
+        <p><a href="{{ route('article',$article->id) }}"  class="btn btn-primary" role="button">View</a> </p>
       </div>
     </div>
   </div>

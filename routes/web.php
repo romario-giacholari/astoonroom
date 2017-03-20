@@ -38,7 +38,7 @@ Route::delete('/photos/{id}', 'PhotoController@destroy');
   
 Route::get('/articles/search/', 'ArticlesController@search');
 Route::get('/articles/', 'ArticlesController@index');
-Route::get('/articles/{id}', 'ArticlesController@show');
+Route::get('/articles/{id}', 'ArticlesController@show')->name('article');
 
 
 
