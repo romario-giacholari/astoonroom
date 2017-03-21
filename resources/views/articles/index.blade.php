@@ -2,12 +2,11 @@
 @section('content')
 <div class = 'container'>
 <div class = 'row'>
-<div class = "col-md-12 col-md-offset-0" >
 @if(Session::has('flash_message'))
-<div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'margin-top:0px;'>{{Session::get('flash_message')}}
+<div class = 'row'>
+<div  id='alert-msg' class = 'alert alert-danger' style = 'margin-top:0px;'>{{Session::get('flash_message')}}
 </div>
-
-
+</div>
 <script>
 $(document).ready(function(){
   $('#alert-msg').fadeIn(2000);
@@ -66,7 +65,7 @@ $(document).ready(function(){
 </div>
 	
 @endforeach
-	</div>
+
  </div>
 </div>
 

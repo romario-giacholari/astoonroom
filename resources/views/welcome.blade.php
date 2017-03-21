@@ -65,6 +65,7 @@
             }
 
             .links > a {
+                color:white;
                 padding: 0 25px;
                 font-size:11px;
                 font-weight: 600;
@@ -74,7 +75,7 @@
             }
             .links > a:hover {
                 opacity:0.5;
-                
+
             }
 
 
@@ -85,8 +86,8 @@
             #img{
                 
                   height:35%;
-                  background-color:white;
-                   background-position: center;
+                  background-color:#00CCFF;
+                  background-position: center;
                   background-repeat: no-repeat;
                   background-size: cover;
                 
@@ -103,7 +104,7 @@
         <div  id = 'img' class="flex-center position-ref full-height" >
             <div class="content">
                 <div class="title m-b-md">
-                    <h1 style ='color:black;font-family:Lato;'><span style ='color:blue;'>@</span>astonroom</h1>
+                    <h1 style ='color:white;font-family:Lato;'><span>@</span>astonroom</h1>
                 </div>
 
                 <div class="links">
@@ -123,7 +124,7 @@
 
         </div>  
         <hr>
-          <div class = " col-md-12 col-md-offset-0 " >
+          <div class = " col-md-12 col-md-offset-0 " style = 'padding:30px'>
           <div class = 'container'>
                 <div class = 'row'>
 
@@ -157,7 +158,7 @@
 
 
       @if(Session::has('flash_message'))
-      <div class =' container'>
+      <div class =' container' >
        <div class = 'row'>
         <div class = ' col-md-12'>
             <div  id='alert-msg' class = 'alert alert-danger col-md-12 col-md-offset-0' style = 'margin-top:0px;'>  <p>{{Session::get('flash_message')}}</p>
@@ -247,7 +248,7 @@
 </div>
 </div>
 
-  <footer class="text-center jumbotron" style = 'background-color: white'>
+  <footer class="text-center jumbotron" style = 'background-color:#D9E6E6;margin-top:20px;'>
        <p style = 'font-size:1em'>Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
    </footer>            
               
