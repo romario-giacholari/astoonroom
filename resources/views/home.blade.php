@@ -27,7 +27,7 @@
                 </a>
            </td>
             <td style = 'height:100%;'>
-                  <a href ='#' name = 'delete'><button  class = 'btn btn-danger btn-sm pull-left ' data-toggle="modal" data-target=".bd-example-modal-lg"><span class = 'glyphicon glyphicon-trash'></span></button></a>
+                  <a href ='#' id ='delete' name = 'delete'><button  class = 'btn btn-danger btn-sm pull-left ' data-toggle="modal" data-target=".bd-example-modal-lg"><span class = 'glyphicon glyphicon-trash'></span></button></a>
            </td>
          </tr>
         </tbody>

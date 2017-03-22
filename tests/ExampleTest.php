@@ -24,26 +24,4 @@ class ExampleTest extends TestCase
              ->see($post->body);
     }
 
-    //Given there is a user
-
-    //when  logged in
-
-    //and deletes the ad
-
-    //then the ad should not exist any more
-
-     /** @test */
-      public function login_user(){
-
-        $user = User::first();
-        $this->visit('/login')
-             ->see('login')
-             ->type($user->email,'email')
-             ->type('secret','password')
-             ->press('login')
-             ->see('/home')
-             ->click('delete');
-    }
-
-
 }

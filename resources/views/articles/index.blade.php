@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class = 'container'>
+<div class = " col-md-12 col-md-offset-0 ">
 <div class = 'row'>
 @if(Session::has('flash_message'))
 <div class = 'row'>
@@ -16,7 +17,7 @@ $(document).ready(function(){
 
 
 
-        <div class = " col-md-12 col-md-offset-0 ">
+        <div class = " col-md-12 col-md-offset-0 jumbotron">
 			
 						<div class="form-group ">
 						
@@ -40,7 +41,6 @@ $(document).ready(function(){
 								
 							</form>
 						</div>
-     
         </div>
         
 
@@ -67,6 +67,7 @@ $(document).ready(function(){
 @endforeach
 
  </div>
+</div>
 </div>
 
 <div class = 'text-center'>{{$articles->links()}}</div>
