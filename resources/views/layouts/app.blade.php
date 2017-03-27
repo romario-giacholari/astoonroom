@@ -144,7 +144,6 @@
     #mainImage:hover{
         opacity:0.8;
     }
-
   
              .sidenav {
                 height: 100%;

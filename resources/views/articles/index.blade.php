@@ -17,13 +17,13 @@ $(document).ready(function(){
 
 
 
-        <div class = " col-md-12 col-md-offset-0 jumbotron">
+        <div class = " col-md-12 col-md-offset-0">
 			
 						<div class="form-group ">
 						
 				           <form method = 'GET' action = 'articles/search'>
 							
-							  <div class = " col-xs-8 col-md-10 col-md-offset-0">
+							  <div class = " col-xs-12 col-md-10 col-md-offset-0">
 								<div class="form-group" >
 								  <label for="sel1">Sort by location</label>
 								  <select required class="form-control" id="q" name = 'q'>
@@ -45,7 +45,7 @@ $(document).ready(function(){
         
 
 @foreach($articles as $article)
-  <div class=" col-sm-12 col-md-4 col-xlg-6 col-md-offset-0">
+  <div class=" col-sm-12 col-md-4 col-xlg-6 col-md-offset-0" >
   <div class="row">
     <div  class="thumbnail " >
     @if(count($article->photo) > 0)
