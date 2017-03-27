@@ -84,8 +84,10 @@
 <blockquote>
 This is a side project I that I have been working on lately. The only purpose of this web app, is to try an expand my web development skills. It is not serving any other purpose or whatsoever. Anyhow, you can find me on LinkedIn by following the link below. Feel free to contact me on this email: giacholari@gmail.com
 
-
 </blockquote>
+
+<img src = 'http://www.uws.asia/uploadimg/201602/Accommodation.png' height ='200' width ='200' style =" display: block;margin-left: auto;
+    margin-right: auto;">
   <footer class="text-center" style = ';margin-top:20px;'>
        <p style = 'font-size:1em'>Created by <a href = 'https://www.linkedin.com/in/romario-giacholari-71130b11b?trk=hp-identity-name' target="_blank">Romario Giacholari</a></p>
    </footer> 
