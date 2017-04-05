@@ -156,7 +156,7 @@
                 overflow-x: hidden;
                 transition:0s;
                 text-align:center;
-                opacity:1;
+                opacity:0.9;
                 
 
 
@@ -167,13 +167,12 @@
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size:24px;
+                font-size:3em;
                 font-family: Lato;
-                color: #818181;
+                color: white;
                 display: block;
                 transition: 0.5s;
                 margin-left:auto;
-                margin-right:100%;
                 position:relative;
 
 
@@ -182,7 +181,7 @@
             }
 
             .sidenav a:hover{
-                color:white;
+                color:grey;
             }
 
             .closebtn {
@@ -203,13 +202,11 @@
 </head>
 <body>
     <div id="app">
-
             <div id="mySidenav" class="sidenav">
-                    
-             
-
                 <div class = 'container'>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
+                <div class="row"> 
+             <div class="col-md-12 col-md-offset-0">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-remove-circle"></span></a>
                 <a href="/home"><span class="glyphicon glyphicon-home"></span></a>
                 <a href="/articles"><span class ='glyphicon glyphicon-flash'></span></a>
                 <a href="/create"><span class =' glyphicon glyphicon-plus'></span></a>
@@ -230,14 +227,9 @@
                                             {{ csrf_field() }}
                                         </form>
                           
-                        @endif
-                     <!--       
-                 <form action = '/articles/search' method = 'GET' class="navbar-form navbar-left" role="search">
-                  <div class="form-group">
-                    <input size = '30' style = 'color:white;background:black;' id="search" name = 'q' type="text" class="form-control" placeholder="Search">
-                  </div>
-                </form>
-                    -->
+           @endif
+            </div>
+            </div>
             </div>
             </div>
 
@@ -307,7 +299,7 @@ $("#content").click(function() {
 });
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "80px";
+    document.getElementById("mySidenav").style.width = "100%    ";
     document.getElementById("app").style.marginLeft = "0px";
 }
 
