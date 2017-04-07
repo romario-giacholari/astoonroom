@@ -82,7 +82,7 @@
 </div>
 </div>
 <blockquote>
-This is a side project I that I have been working on lately. The only purpose of this web app, is to try an expand my web development skills. It is not serving any other purpose or whatsoever. Anyhow, you can find me on LinkedIn by following the link below. Feel free to contact me on this email: giacholari@gmail.com
+This is a side project that I have been working on lately. The only purpose of this web app, is to try an expand my web development skills. It is not serving any other purpose or whatsoever. Anyhow, you can find me on LinkedIn by following the link below. Feel free to contact me on this email: giacholari@gmail.com
 
 </blockquote>
 

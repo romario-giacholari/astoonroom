@@ -156,7 +156,7 @@
                 overflow-x: hidden;
                 transition:0s;
                 text-align:center;
-                opacity:0.9;
+                opacity:1;
                 
 
 
@@ -205,8 +205,8 @@
             <div id="mySidenav" class="sidenav">
                 <div class = 'container'>
                 <div class="row"> 
-             <div class="col-md-12 col-md-offset-0">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-remove-circle"></span></a>
+             <div class="col-md-1 col-md-offset-0">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-remove-circle"></span></a>
                 <a href="/home"><span class="glyphicon glyphicon-home"></span></a>
                 <a href="/articles"><span class ='glyphicon glyphicon-flash'></span></a>
                 <a href="/create"><span class =' glyphicon glyphicon-plus'></span></a>
@@ -297,9 +297,15 @@ $("#content").click(function() {
     document.getElementById("app").style.marginLeft= "0";
 
 });
+$("#mySidenav").click(function() {
+
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("app").style.marginLeft= "0";
+
+});
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "100%    ";
+    document.getElementById("mySidenav").style.width = "150px";
     document.getElementById("app").style.marginLeft = "0px";
 }
 
