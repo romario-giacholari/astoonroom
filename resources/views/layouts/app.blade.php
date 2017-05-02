@@ -93,16 +93,14 @@
     position: absolute;
     top: 55px;
     right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
+    color:white;
+    font-size:3em;
     transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
     color:white;
-    opacity:1;
     text-decoration: none;
     cursor: pointer;
 }
@@ -144,7 +142,7 @@
     #mainImage:hover{
         opacity:0.8;
     }
-  
+
              .sidenav {
                 height: 100%;
                 width: 0;
@@ -197,7 +195,6 @@
                 border-color: white transparent transparent transparent;
                 margin-top:7px;
             }
-
     </style>
 </head>
 <body>
