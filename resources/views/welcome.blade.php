@@ -82,8 +82,9 @@
 </div>
 </div>
 <blockquote>
+<h3>
 This is a side project that I have been working on lately. The only purpose of this web app, is to try an expand my web development skills. It is not serving any other purpose or whatsoever. Anyhow, you can find me on LinkedIn by following the link below. Feel free to contact me on this email: giacholari@gmail.com
-
+</h3>
 </blockquote>
 
 <img src = 'http://www.uws.asia/uploadimg/201602/Accommodation.png' height ='200' width ='200' style =" display: block;margin-left: auto;
