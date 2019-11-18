@@ -7,23 +7,23 @@
       <div class = "col-md-12 col-md-offset-0" >
 
       <div id = 'press' class = 'jumbotron' style = 'padding:40px'>
-          <h1 class = 'cobotron'> {{$articles->title}}  </h1>
-          <div style = 'font-size:1em; font-family: Arial; '>{{$articles->body}}</div>
+          <h1 class = 'cobotron'> {{$article->title}}  </h1>
+          <div style = 'font-size:1em; font-family: Arial; '>{{$article->body}}</div>
           <hr>
-           <div style = 'font-size:1em; font-family: Arial; '>Year: {{$articles->year}}</div>
-          <div style = 'font-size:1em; font-family: Arial; '>Location: {{$articles->location}}</div>
-           <div style = 'font-size:1em; font-family: Arial; '>Gender: {{$articles->gender}}</div>
+           <div style = 'font-size:1em; font-family: Arial; '>Year: {{$article->year}}</div>
+          <div style = 'font-size:1em; font-family: Arial; '>Location: {{$article->location}}</div>
+           <div style = 'font-size:1em; font-family: Arial; '>Gender: {{$article->gender}}</div>
            @if(Auth::check())
-           <div style = 'font-size:1em; font-family: Arial; '>Contact info:{{$articles->contact}}</div>
+           <div style = 'font-size:1em; font-family: Arial; '>Contact info:{{$article->contact}}</div>
            @endif
-           @if($articles->postcode)
-           <div id = 'postcode' style = 'font-size:1em; font-family: Arial; '>Postcode:{{$articles->postcode}}</div>
+           @if($article->postcode)
+           <div id = 'postcode' style = 'font-size:1em; font-family: Arial; '>Postcode:{{$article->postcode}}</div>
            @endif
-           <div style = 'font-size:1em; font-family: Arial; '>Created: {{$articles->created_at->diffForHumans()}}</div>
+           <div style = 'font-size:1em; font-family: Arial; '>Created: {{$article->created_at->diffForHumans()}}</div>
    </div>
 </div>
 
- @foreach($articles->photo as $image)
+ @foreach($article->photo as $image)
  @if($image)
 <div class="col-xs-12 col-md-6 " style = 'padding:15px'>
       <img id="myImg" class = 'img-responsive ' src = '{{$image->path}}'>
@@ -68,7 +68,7 @@ span.onclick = function() {
  @endforeach
 
  
-@if($articles->postcode != null)
+@if($article->postcode != null)
  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZUHOHlyg7U3qHZuor6SULmnrxEE0Vbo4"></script>
       <script type="text/javascript">
 

@@ -79,7 +79,7 @@ $(document).ready(function(){
           </div>
           <div class="form-group">
             <label for="exampleTextarea">Description</label>
-            <textarea maxlength=255" required class="form-control" id="body" name ='body' rows="5">{{$articles->body}}</textarea>
+            <textarea maxlength="255" required class="form-control" id="body" name ='body' rows="5">{{$articles->body}}</textarea>
             <small  class="form-text text-muted">Clear and thorough description of your room, availability etc.</small>
          </div>
 

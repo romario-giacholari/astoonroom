@@ -65,34 +65,34 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-         $articles = Article::find($id);
+         $article = Article::find($id);
 
-         if(count($articles) <1)
+         if(is_null($article))
          {
             return redirect('/articles');
          }
 
-        $image = Photo::find($articles->id);
+        $image = Photo::find($article->id);
 
         if(Auth::user())
         {
             //If user logged in but does not own the article
-            if($articles->user_id != Auth::user()->id)
+            if($article->user_id != Auth::user()->id)
             {
                 //increment views of particular article
-                $articles->views += 1;
-                $articles->save();
+                $article->views += 1;
+                $article->save();
             }  
         }
 
         if(Auth::guest())
         {
             //if user is a guest increment views
-            $articles->views += 1;
-            $articles->save();
+            $article->views += 1;
+            $article->save();
         }
         
-        return view('articles.show', compact('articles','image'));
+        return view('articles.show', compact('article','image'));
          
     }
 
